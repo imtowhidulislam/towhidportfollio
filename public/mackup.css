@@ -42,7 +42,7 @@ img {
   width: 100%;
 }
 .area_definer {
-  max-width: 80rem;
+  max-width: 90rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -52,12 +52,36 @@ img {
   /* background-color: var(--bgc-cyan); */
   padding-block: 2rem;
   justify-content: space-between;
+  /* border: 2px solid red; */
+  /* width: 100%; */
 }
 .nav_links {
   display: flex;
 }
 .nav_list + .nav_list {
   margin-left: 1rem;
+}
+/* * Sticky NavBar */
+.sticky {
+  position: fixed;
+
+  transform: translateY(-10%);
+  /* width: 100%; */
+  max-width: 90rem;
+  z-index: 999;
+  background-color: var(--bgc-purple);
+}
+
+.nav_link {
+  padding-bottom: 0.5rem;
+  /* transform: translate(0%); */
+  /* transform-origin: left; */
+  transition: all 300ms ease-in;
+}
+:is(.nav_link):hover,
+:focus {
+  border-bottom: 2px solid var(--bgc-sweet);
+  /* transform: translate(100%); */
 }
 /* *Sing in Button */
 .sign_link {
@@ -75,6 +99,7 @@ img {
 .fas {
   font-size: 1.2rem;
   cursor: pointer;
+  color: white;
 }
 .mobile_link {
   display: none;
@@ -93,7 +118,7 @@ img {
 .intro_container {
   display: flex;
   gap: 2rem;
-  padding-block: 5rem;
+  padding-block: 10rem;
 }
 .intro_container > * {
   flex-basis: 100%;
@@ -107,6 +132,16 @@ img {
   border: 7px solid var(--bgc-purple);
   outline: 5px solid var(--bgc-orange);
   outline-offset: 4px;
+}
+.intro_img {
+  height: 100%;
+  object-fit: cover;
+}
+.about_img {
+  max-width: 1000px;
+  max-height: 1000px;
+  height: 100%;
+  object-fit: cover;
 }
 .intro_container > *:nth-child(1) {
   /* border: 2px solid black; */
@@ -142,6 +177,7 @@ img {
   cursor: pointer;
   transition: color 250ms ease-in;
   font-weight: bold;
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 .fab:hover,
 .fab:focus {
@@ -154,20 +190,8 @@ img {
   font-size: clamp(1rem, 5vw, 1.5rem);
 }
 .intro_social_link_links + .intro_social_link_links {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .intro_links {
   padding-block: 1rem;
-}
-.intro_btn {
-  border: none;
-  outline: none;
-  background-color: var(--bgc-cyan);
-  color: white;
-  font-weight: bold;
-
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
 }
