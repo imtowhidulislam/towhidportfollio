@@ -75,6 +75,7 @@ projectContainer.addEventListener("click", async (e) => {
       formAlert.textContent = "successfully deleted";
       formAlert.style.backgroundColor = "white";
       formAlert.style.textAlign = "center";
+      formAlert.style.marginTop = "1rem";
       formAlert.style.fontWeight = "bold";
       formAlert.classList.add("success");
     } catch (err) {
@@ -119,10 +120,12 @@ formDOM.addEventListener("submit", async (e) => {
     formAlert.style.display = "block";
     formAlert.textContent = "success , project added to the server";
     formAlert.classList.add("success");
+    formAlert.style.marginTop = "1rem";
   } catch (err) {
     console.log(err);
     formAlert.style.display = "none";
     formAlert.textContent = "failed , project doesn't added to the server";
+    formAlert.style.marginTop = "1rem";
   }
   setTimeout(() => {
     formAlert.style.display = "none";
