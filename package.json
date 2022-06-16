@@ -1,17 +1,13 @@
 {
-  "name": "fullStackPortfolio",
+  "name": "fullStackPortfollio1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "app.js",
+  "type": "module",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "Router": "^2.1.0",
+    "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "config": "^3.3.7",
@@ -22,5 +18,20 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.8",
     "nodemon": "^2.0.16"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtowhidulislam/fullStackPortfollio1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtowhidulislam/fullStackPortfollio1/issues"
+  },
+  "homepage": "https://github.com/imtowhidulislam/fullStackPortfollio1#readme"
 }
