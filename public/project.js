@@ -13,12 +13,23 @@ const formAlert = document.querySelector(".form_alert");
 console.log(projectContainer);
 
 const url = "http://localhost:3000/project/";
+// * sorting array
+const sortArr = (arr) => {
+  const sortingArr = arr.sort(
+    (a, b) => a.createdAt.slice(-4, -1) - b.createdAt.slice(-4, -1)
+  );
+  console.log(sortingArr);
+};
+
 // * Showing all Projects:::
 const showProject = async () => {
   const res = await fetch(url);
   const data = await res.json();
-
+  console.log(data.slice(0, 2));
   console.log(data);
+
+  sortArr(data);
+
   data.map((project) => {
     const {
       _id: projectId,
