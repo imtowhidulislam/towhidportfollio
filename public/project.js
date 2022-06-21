@@ -9,16 +9,52 @@ const inputSourcecode = document.querySelector(".input_sourcecode");
 const inputGithub = document.querySelector(".input_gitHub");
 const deleteBtn = document.querySelector(".single_project");
 const formAlert = document.querySelector(".form_alert");
+const recentProject = document.querySelector(".recent_projects");
 
-console.log(projectContainer);
+console.log(recentProject);
 
 const url = "http://localhost:3000/project/";
-// * sorting array
+// * sorting array and showing projects:::
+const randomImage = Math.floor(Math.random() * 99 + 1);
+console.log(randomImage);
 const sortArr = (arr) => {
-  const sortingArr = arr.sort(
-    (a, b) => a.createdAt.slice(-4, -1) - b.createdAt.slice(-4, -1)
-  );
+  const sortingArr = arr
+    .sort((a, b) => b.createdAt.slice(-4, -1) - a.createdAt.slice(-4, -1))
+    .slice(0, 3);
   console.log(sortingArr);
+  sortingArr.map((project, i) => {
+    const {
+      _id: projectId,
+      icon,
+      title,
+      category,
+      description,
+      sourceLink,
+      gitHub,
+    } = project;
+
+    const html = `
+    <div class="project">
+            <div class="icon">
+              <i class="${icon}"></i>
+            </div>
+            
+            <h2 class="project_name">${title}</h2>
+            <h4 class="project_ctg">${category}</h4>
+            <p class="project_dsc">${description}</p>
+           
+          </div>
+    `;
+
+    recentProject.insertAdjacentHTML("beforeend", html);
+  });
+  const projectOne = document.querySelectorAll(".project");
+  const projectTitle = document.querySelector(".project_name");
+  projectTitle.style.textTransform = "capitalize";
+  projectOne.forEach(
+    (pro, i) =>
+      (pro.style.backgroundImage = `url("http://unsplash.it/1000/1000?image=${randomImage}${i}")`)
+  );
 };
 
 // * Showing all Projects:::

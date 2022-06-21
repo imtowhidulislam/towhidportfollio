@@ -46,6 +46,5 @@ const crateProject = new mongoose.Schema(
   }
 );
 
-console.log(randomNumber);
 const myProject = mongoose.model("myProject", crateProject);
 export default myProject;

@@ -52,6 +52,11 @@
   flex: 1 1 70%;
   /* padding: 1rem; */
 }
+@media (max-width: 35rem) {
+  .project_layout {
+    flex-wrap: wrap;
+  }
+}
 .input_area {
   display: flex;
   gap: 1rem;
@@ -97,7 +102,12 @@ label {
   gap: 2rem;
   align-items: flex-start;
   justify-content: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
 }
+
 .single_project {
   flex: 1 1 17rem;
   background-color: var(--bgc-orange);
