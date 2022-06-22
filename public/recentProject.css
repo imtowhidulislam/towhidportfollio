@@ -37,17 +37,16 @@
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgb(79, 78, 78);
 }
-@media (max-width: 35rem) {
-  .project {
-    aspect-ratio: 1.5/1;
-    border: 2px solid white;
-  }
-}
 .project .project_name {
   text-transform: capitalize;
 }
 .recent_projects > * {
   flex: 1 1 25rem;
+}
+@media (max-width: 40rem) {
+  .project {
+    aspect-ratio: 1.5/1;
+  }
 }
 @media (max-width: 30rem) {
   .project {

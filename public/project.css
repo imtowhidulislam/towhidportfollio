@@ -33,6 +33,13 @@
   display: flex;
   justify-content: center;
 }
+
+.action_btn_container i {
+  font-size: unset;
+}
+.button_container > .fas{
+  font-size: unset;
+}
 .form_title {
   text-align: center;
   text-transform: uppercase;

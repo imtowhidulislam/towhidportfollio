@@ -4,6 +4,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import cors from "cors";
 import projectRoute from "./routes/projectRoute.js";
+import skillRoter from "./routes/skillsRoute.js";
 const app = express();
 const port = 3000;
 
@@ -11,6 +12,7 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/project", projectRoute);
+app.use("/api/skill", skillRoter);
 // app.use(express.static("./public"));
 
 // ! Connection to DataBase...

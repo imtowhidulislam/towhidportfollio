@@ -13,7 +13,7 @@ const recentProject = document.querySelector(".recent_projects");
 
 console.log(recentProject);
 
-const url = "http://localhost:3000/project/";
+const url1 = "http://localhost:3000/project/";
 // * sorting array and showing projects:::
 const randomImage = Math.floor(Math.random() * 99 + 1);
 console.log(randomImage);
@@ -59,7 +59,7 @@ const sortArr = (arr) => {
 
 // * Showing all Projects:::
 const showProject = async () => {
-  const res = await fetch(url);
+  const res = await fetch(url1);
   const data = await res.json();
   console.log(data.slice(0, 2));
   console.log(data);
@@ -148,7 +148,7 @@ formDOM.addEventListener("submit", async (e) => {
   const gitHub = inputGithub.value;
   console.log(icon, title, category, description, sourceLink, gitHub);
   try {
-    await axios.post(url, {
+    await axios.post(url1, {
       icon,
       title,
       category,
