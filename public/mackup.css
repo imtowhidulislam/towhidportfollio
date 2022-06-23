@@ -55,7 +55,7 @@ img {
   width: 100%;
 }
 .area_definer {
-  max-width: 90rem;
+  max-width: 100rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -89,12 +89,15 @@ img {
 .nav_container {
   display: flex;
   align-items: center;
-  /* background-color: var(--bgc-cyan); */
+  /* background-color: var(--bgc-orange); */
   padding-block: 2rem;
   padding-inline: 4rem;
   justify-content: space-between;
   /* border: 2px solid red; */
   /* width: 100%; */
+}
+.main_nav {
+  /* background-color: var(--bgc-orange); */
 }
 .nav_links {
   display: flex;
@@ -109,8 +112,11 @@ img {
   transform: translateY(-10%);
   /* width: 100%; */
   max-width: 90rem;
+  transition: transform 250ms ease-in;
   z-index: 999;
-  background-color: var(--bgc-purple);
+  /* background-color: var(--bgc-purple); */
+  background-color: hsla(267, 87%, 55%, 0.38);
+  backdrop-filter: blur(1.5rem);
 }
 
 .nav_link {
@@ -118,11 +124,16 @@ img {
   /* transform: translate(0%); */
   /* transform-origin: left; */
   transition: all 300ms ease-in;
+  /* padding: 0.5rem; */
+  border-bottom: 2px solid transparent;
+  /* opacity: 0; */
 }
 :is(.nav_link):hover,
 :focus {
-  border-bottom: 2px solid var(--bgc-sweet);
+  /* border-bottom: 2px solid var(--bgc-sweet); */
   /* transform: translate(100%); */
+  /* opacity: 1; */
+  border-bottom: 2px solid gray;
 }
 /* *Sing in Button */
 .sign_link {

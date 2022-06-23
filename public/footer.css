@@ -13,7 +13,7 @@ footer {
 .footer-dark {
 }
 .footer-light {
-  background-color: #ffffff;
+  background-color: #e9e4e4;
 }
 .fas,
 .fab {
@@ -21,10 +21,10 @@ footer {
 }
 .area_definer {
   width: 100%;
-
-  max-width: 80rem;
+  max-width: 100rem;
   margin: 0 auto;
-
+}
+.footer {
   padding-inline: 4rem;
   padding-block: 6rem;
 }
@@ -68,4 +68,15 @@ p {
 }
 .footer_row > *:nth-child(3) {
   flex: 1 1 30%;
+}
+@media (max-width: 65rem) {
+  .flex {
+    flex-direction: column;
+  }
+  .footer {
+    padding-inline: 2rem;
+  }
+  .area_definer {
+    padding-inline: 3rem;
+  }
 }

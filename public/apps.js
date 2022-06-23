@@ -15,19 +15,18 @@ const navContainerHeight = navContainer.getBoundingClientRect().height;
 const callBack = (entries, observer) => {
   const [entry] = entries;
 
-  /*  if (!entry.isIntersecting) navContainer.classList.add("sticky");
-  else navContainer.classList.remove("sticky"); */
+  if (!entry.isIntersecting) navContainer.classList.add("sticky");
+  else navContainer.classList.remove("sticky");
 };
 
-/* const observerOptions = {
+const observerOptions = {
   root: null,
   threshold: 0,
   rooMarging: `-${navContainerHeight}px`,
-}; */
+};
 
-/* const observer = new IntersectionObserver(callBack, observerOptions);
+const observer = new IntersectionObserver(callBack, observerOptions);
 observer.observe(header);
- */
 
 // moodBtn.classList.add("mood-night");
 // moodBtn.style.color = "hotpink";
