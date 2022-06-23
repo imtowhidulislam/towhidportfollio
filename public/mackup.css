@@ -8,7 +8,7 @@
   --font-clr-dark: #0b071d;
   --font-clr-light: #ffffff;
 
-  --night-mode: #000000;
+  --night-mode: #ffc003;
   --day-mode: #ffffff;
 }
 * {
@@ -23,7 +23,14 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--bgc-body);
+}
+.dark-mood {
+  background-color: var(--bgc-body-dark);
+  color: var(--font-clr-light);
+}
+.light-mood {
+  background-color: var(--bgc-body-light);
+  color: var(--font-clr-dark);
 }
 h1,
 h2,
@@ -34,14 +41,14 @@ h6,
 span,
 p {
   margin: 0;
-  color: white;
+  /* color: white; */
 }
 
 li,
 a {
   list-style: none;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
 }
 img {
   display: block;
@@ -55,7 +62,7 @@ img {
 .mood_btn {
   background-color: rgb(211, 210, 210);
   position: fixed;
-  top: 10%;
+  top: 15%;
   right: 0%;
   transform: translate(90%);
   transition: transform 300ms ease-in, background-color 300ms ease-in;
@@ -64,13 +71,21 @@ img {
 }
 .mood_btn .fa-moon {
   font-size: 1rem;
-  color: var(--day-mode);
   padding: 0.75rem;
+  color: unset;
 }
 .mood_btn:hover {
   transform: translate(0%);
 }
-
+.dark-font {
+  color: var(--font-clr-dark);
+}
+.mood-day {
+  color: var(--day-mode);
+}
+.mood-night {
+  color: var(--night-mode);
+}
 .nav_container {
   display: flex;
   align-items: center;
@@ -116,12 +131,13 @@ img {
   border-radius: 0.25rem;
 }
 .sign_link > * {
-  color: white;
+  /* color: white; */
 }
 .mobile_btn {
   background-color: transparent;
   border: none;
 }
+
 .fas {
   /* font-size: 1.2rem; */
   cursor: pointer;
@@ -145,9 +161,14 @@ img {
   display: flex;
   gap: 2rem;
   padding-block: 10rem;
+  /* background-color: var(--bgc-purple); */
+  /* opacity: 0.4; */
 }
 .intro_container > * {
   flex-basis: 100%;
+}
+.intro_child-1 {
+  /* color: #ffc003; */
 }
 .intro_child-2 {
   border-start-start-radius: 5rem;

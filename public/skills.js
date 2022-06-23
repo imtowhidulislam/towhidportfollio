@@ -42,8 +42,6 @@ const Slider = () => {
   // const btnRight = document.querySelector(".fa-angle-right");
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
-  console.log(slide);
-  console.log(btnLeft);
 
   /*   const crtDots = function () {
       slide.forEach((_, i) =>
@@ -67,7 +65,6 @@ const Slider = () => {
       return (s.style.transform = `translateX(${100 * (i - slides)}%)`);
     });
   };
-  console.log(slide);
   let currentSlide = 0;
   /* * Next slide */
   const nextSlide = () => {
@@ -76,7 +73,6 @@ const Slider = () => {
     } else {
       currentSlide++;
     }
-    console.log(currentSlide);
     gotoSlide(currentSlide);
     // removeActive(currentSlide);
   };
@@ -87,7 +83,6 @@ const Slider = () => {
     if (currentSlide < 0) {
       currentSlide = slide.length - 1;
     }
-    console.log(currentSlide);
     gotoSlide(currentSlide);
     // removeActive(currentSlide);
   };
@@ -134,7 +129,6 @@ const url = "http://localhost:3000/api/skill/";
 const showSkills = async () => {
   const res = await fetch(url);
   const skillData = await res.json();
-  console.log(skillData);
 
   skillData.map((skill) => {
     const { icon, title, desc, year } = skill;

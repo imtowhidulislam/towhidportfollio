@@ -8,7 +8,12 @@
   color: white;
 } */
 footer {
-  background-color: #000;
+  background-color: #000000;
+}
+.footer-dark {
+}
+.footer-light {
+  background-color: #ffffff;
 }
 .fas,
 .fab {

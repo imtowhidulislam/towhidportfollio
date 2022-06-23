@@ -16,12 +16,10 @@ console.log(recentProject);
 const url1 = "http://localhost:3000/project/";
 // * sorting array and showing projects:::
 const randomImage = Math.floor(Math.random() * 99 + 1);
-console.log(randomImage);
 const sortArr = (arr) => {
   const sortingArr = arr
     .sort((a, b) => b.createdAt.slice(-4, -1) - a.createdAt.slice(-4, -1))
     .slice(0, 3);
-  console.log(sortingArr);
   sortingArr.map((project, i) => {
     const {
       _id: projectId,
@@ -61,8 +59,6 @@ const sortArr = (arr) => {
 const showProject = async () => {
   const res = await fetch(url1);
   const data = await res.json();
-  console.log(data.slice(0, 2));
-  console.log(data);
 
   sortArr(data);
 
