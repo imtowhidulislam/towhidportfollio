@@ -3,7 +3,13 @@
   --bgc-orange: #ee8739;
   --bgc-sweet: #ec5665;
   --bgc-cyan: #0d7d85;
-  --bgc-body: #0b071d;
+  --bgc-body-dark: #0b071d;
+  --bgc-body-light: #ffffff;
+  --font-clr-dark: #0b071d;
+  --font-clr-light: #ffffff;
+
+  --night-mode: #000000;
+  --day-mode: #ffffff;
 }
 * {
   margin: 0;
@@ -46,11 +52,31 @@ img {
   width: 90%;
   margin: 0 auto;
 }
+.mood_btn {
+  background-color: rgb(211, 210, 210);
+  position: fixed;
+  top: 10%;
+  right: 0%;
+  transform: translate(90%);
+  transition: transform 300ms ease-in, background-color 300ms ease-in;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.mood_btn .fa-moon {
+  font-size: 1rem;
+  color: var(--day-mode);
+  padding: 0.75rem;
+}
+.mood_btn:hover {
+  transform: translate(0%);
+}
+
 .nav_container {
   display: flex;
   align-items: center;
   /* background-color: var(--bgc-cyan); */
   padding-block: 2rem;
+  padding-inline: 4rem;
   justify-content: space-between;
   /* border: 2px solid red; */
   /* width: 100%; */
