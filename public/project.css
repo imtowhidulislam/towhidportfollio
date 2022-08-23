@@ -37,7 +37,7 @@
 .action_btn_container i {
   font-size: unset;
 }
-.button_container > .fas{
+.button_container > .fas {
   font-size: unset;
 }
 .form_title {
@@ -119,13 +119,19 @@ label {
   flex: 1 1 17rem;
   background-color: var(--bgc-orange);
   max-width: 17rem;
-  /* padding: 1rem; */
-  border: 2px solid white;
   border-radius: 0.5rem;
 }
 .btn_prj {
-  font-size: 0.4rem;
-  background-color: rgb(15, 18, 50);
+  border: unset;
+  border-radius: unset;
+}
+.btn_prj i {
+  font-size: clamp(0.8rem, 3vw + 0.8rem, 1.2rem);
+  color: var(--bgc-cyan);
+  transition: color 300ms ease-in;
+}
+.btn_prj i:hover {
+  color: var(--bgc-body);
 }
 .project_dsc {
   text-align: center;
@@ -159,8 +165,9 @@ label {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bgc-body);
-  padding: 0.25rem;
+  /* background-color: var(--bgc-body); */
+  padding-inline: 2rem;
+  padding-block: 1rem;
   border-radius: 0.5rem;
 }
 

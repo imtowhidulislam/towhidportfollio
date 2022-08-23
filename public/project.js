@@ -89,10 +89,10 @@ const showProject = async () => {
             <h4 class="project_ctg">${category}</h4>
             <p class="project_dsc">${description}</p>
             <div class="btn_container">
-              <a href="${sourceLink}" target="_blank" class="btn_prj ripple_btn btn-1"
+              <a href="${sourceLink}" target="_blank" class="btn_prj btn-1"
                 ><i class="fas fa-code"></i
               ></a>
-              <a href="${gitHub}" target="_blank" class="btn_prj ripple_btn btn-2"
+              <a href="${gitHub}" target="_blank" class="btn_prj btn-2"
                 ><i class="fab fa-github"></i
               ></a>
             </div>
