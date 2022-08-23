@@ -15,6 +15,34 @@ footer {
 .footer-light {
   background-color: #e9e4e4;
 }
+.footer_copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+}
+.footer_links_icon {
+  display: flex;
+}
+.footer_links_icon i {
+  font-size: clamp(1rem, 5vw + 1rem, 1.4rem);
+}
+.footer_links_icon li + li {
+  margin-left: max(3vh, 0.5rem);
+}
+.name::before {
+  content: "T";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bgc-orange);
+}
+
+.footer-logo {
+  color: orange;
+  font-variant: small-caps;
+  text-align: center;
+  font-size: clamp(0.8rem, 3vw, 1.4rem);
+}
 .fas,
 .fab {
   /* color: aqua; */

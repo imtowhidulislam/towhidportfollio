@@ -23,6 +23,7 @@
   box-sizing: border-box;
 }
 body {
+  z-index: 100;
 }
 .dark-mood {
   background-color: var(--bgc-body-dark);
@@ -120,20 +121,22 @@ img {
 }
 
 .nav_link {
-  padding-bottom: 0.5rem;
-  /* transform: translate(0%); */
-  /* transform-origin: left; */
-  transition: all 300ms ease-in;
-  /* padding: 0.5rem; */
-  border-bottom: 2px solid transparent;
-  /* opacity: 0; */
+  /* transition: all 300ms ease-in; */
+  position: relative;
 }
-:is(.nav_link):hover,
-:focus {
-  /* border-bottom: 2px solid var(--bgc-sweet); */
-  /* transform: translate(100%); */
-  /* opacity: 1; */
-  border-bottom: 2px solid gray;
+.nav_link::after {
+  position: absolute;
+  content: "";
+  height: 0.2rem;
+  width: 100%;
+  background-color: #333aaa;
+  bottom: -30%;
+  left: 0%;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+.nav_link:hover .nav_link::after {
+  opacity: 1;
 }
 /* *Sing in Button */
 .sign_link {
@@ -252,4 +255,24 @@ img {
 }
 .intro_links {
   padding-block: 1rem;
+}
+/* ? Move to top */
+.top {
+  position: fixed;
+  left: 50%;
+  bottom: 6%;
+  transform: translate(-50%, -50%);
+}
+.top i {
+  animation: topBtn 2000ms ease-in 1000ms infinite alternate forwards;
+  color: var(--bgc-orange);
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+@keyframes topBtn {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.3);
+  }
 }

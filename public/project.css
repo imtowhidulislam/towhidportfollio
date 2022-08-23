@@ -126,7 +126,7 @@ label {
   border-radius: unset;
 }
 .btn_prj i {
-  font-size: clamp(0.8rem, 3vw + 0.8rem, 1.2rem);
+  font-size: clamp(0.7rem, 3vw + 0.7rem, 1rem);
   color: var(--bgc-cyan);
   transition: color 300ms ease-in;
 }

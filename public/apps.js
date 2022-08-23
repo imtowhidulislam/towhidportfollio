@@ -8,8 +8,14 @@ const body = document.body;
 const navLink = document.querySelectorAll(".nav_link");
 const signIn = document.querySelector(".signIn");
 const footer = document.querySelector("footer");
+const footerDate = document.querySelector(".footer_date");
+const topBtn = document.querySelector(".top");
 
-console.log(footer);
+console.log(topBtn);
+top.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("top");
+});
 const navContainerHeight = navContainer.getBoundingClientRect().height;
 
 const callBack = (entries, observer) => {
@@ -85,3 +91,10 @@ const moodButton = () => {
   });
 };
 moodButton();
+
+// * Footer Date functionality???
+const setDate = () => {
+  const currentYear = new Date().getFullYear();
+  footerDate.textContent = currentYear;
+};
+setDate();
