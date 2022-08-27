@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../style/signup.css";
+import UserData from "./userData";
 const registerUrl = "http://localhost:3000/api/user/register";
+const userUrl = "http://localhost:3000/api/user";
 const Signup = () => {
+  const [existingUser, setExistingUser] = useState([]);
   const [input, setInput] = useState({
     firstName: "",
     lastName: "",
@@ -9,20 +12,84 @@ const Signup = () => {
     email: "",
     password: "",
   });
-
+  const [user, setUser] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const handleChange = (e) => {
     e.preventDefault();
+    const { name, value } = e.target;
+    console.log(name, value);
+    setInput({ ...input, [name]: value });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Form");
+    if (
+      input.firstName &&
+      input.lastName &&
+      input.userName &&
+      input.email &&
+      input.password
+    ) {
+      const id = new Date().getTime().toString();
+      const newUser = { ...input };
+      setUser([...user, newUser]);
+      const response = await fetch(registerUrl, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          firstName: input.firstName,
+          lastName: input.lastName,
+          userName: input.userName,
+          email: input.email,
+          password: input.password,
+        }),
+      });
+
+      const resData = await response.json();
+
+      // ! Checking wheather the response in ok or not:::
+      if (!response.ok) {
+        setError(resData.error);
+        setIsLoading(false);
+        throw Error("Something wrong with the request");
+      }
+      if (response.ok) {
+        // ? Saving the user to the  DB >>>
+        localStorage.setItem("user", JSON.stringify(resData));
+        setExistingUser(resData);
+      }
+    }
+    setInput({
+      firstName: "",
+      lastName: "",
+      userName: "",
+      email: "",
+      password: "",
+    });
+  };
+  const showAllUser = async () => {
+    const res = await fetch(userUrl);
+    const dataOfUser = await res.json();
+    // return setExistingUser(dataOfUser);
+    return setUser(dataOfUser);
+  };
+
+  useEffect(() => {
+    showAllUser();
+  }, []);
+
   return (
     <section class="form_container">
       <div class="container">
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <h2 class="form_title">Sing up</h2>
           <div class="input_area">
             <label for="First Name">First Name :</label>
             <input
               type="text"
-              name="first name"
+              name="firstName"
               class="firstName"
               value={input.firstName}
               placeholder="enter first name"
@@ -74,7 +141,7 @@ const Signup = () => {
             />
           </div>
           <div class="form_btn-container">
-            <button class="btn formBtn" type="submit">
+            <button class="btn formBtn" type="submit" onClick={handleSubmit}>
               sign up
             </button>
           </div>
@@ -87,6 +154,12 @@ const Signup = () => {
             </span>
           </p>
         </form>
+      </div>
+      <div className="user_container">
+        {user.map((user) => {
+          const { id, firstName, lastName, userName, email, password } = user;
+          return <UserData key={id} {...user} />;
+        })}
       </div>
     </section>
   );

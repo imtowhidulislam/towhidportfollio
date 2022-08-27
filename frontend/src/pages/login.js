@@ -6,14 +6,34 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     e.preventDefault();
   };
+  const handleSubmit = async (e) => {
+    const response = await fetch(loginUrl, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email: input.email, password: input.password }),
+    });
+    const resData = await response.json();
+    if (!response.ok) {
+      setIsLoading(false);
+      setError(resData.error);
+      throw Error("Something went wrong with the login request");
+    }
+    if (response.ok) {
+      // ? Saving data to the DB >>>
+      localStorage.setItem("user", JSON.stringify(resData));
+      setIsLoading(false);
+    }
+  };
   return (
     <section class="form_container">
       <div class="container">
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <h2 class="form_title">Sing in</h2>
           <div class="input_area">
             <label for="email">Email :</label>
@@ -38,7 +58,7 @@ const Login = () => {
             />
           </div>
           <div class="form_btn-container">
-            <button class="btn formBtn" type="submit">
+            <button class="btn formBtn" type="submit" onClick={handleSubmit}>
               sign in
             </button>
           </div>
