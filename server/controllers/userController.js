@@ -65,7 +65,7 @@ export const createUser = async (req, res, next) => {
 // ? Creating token :::
 const createToken = (_id) => {
   return jwt.sign({ _id }, process.env.SECRET_PASS, {
-    expiresIn: "30s",
+    expiresIn: "1d",
   });
 };
 // !! Register a new User ):
@@ -104,7 +104,7 @@ export const registerUser = async (req, res, next) => {
     res.status(200).json({ newUser, token });
     next();
   } catch (err) {
-    res.status(500).json({ msg: err.message });
+    res.status(500).json({ error: err.message });
   }
 };
 
@@ -130,6 +130,6 @@ export const LoginUser = async (req, res, next) => {
     res.status(200).json({ email, token });
     next();
   } catch (err) {
-    res.status(400).json({ msg: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
