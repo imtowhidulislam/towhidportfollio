@@ -1,12 +1,42 @@
 import React from "react";
 
+import { GrInstagram } from "react-icons/gr";
+import {
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaTwitterSquare,
+  FaCopyright,
+  FaPhoneAlt,
+  FaMoon,
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaAngleLeft,
+  FaAngleRight,
+  FaInstagramSquare,
+} from "react-icons/fa";
+import { FiArrowUp, FiMail } from "react-icons/fi";
+import { BsSunFill } from "react-icons/bs";
+
+import "../style/about.css";
+import "../style/footer.css";
+import "../style/mackup.css";
+import "../style/navbarStyle.css";
+import "../style/project.css";
+import "../style/recentProject.css";
+import "../style/signup.css";
+import "../style/signupStyle.css";
+import "../style/skill.css";
+import "../style/userStyle.css";
+import Towhid from "../assets/towhid-small.jpg";
+
 const Homepage = () => {
   return (
     <div class="dark-mood">
       <div class="section">
         {/* NavBar Section */}
         <header class="header">
-          <div class="main_nav ">
+          {/*           <div class="main_nav ">
             <div class="nav_container  area_definer">
               <h2 class="logo">Towhid</h2>
               <nav>
@@ -46,7 +76,7 @@ const Homepage = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Intro Section */}
           <div class="intro_container area_definer">
@@ -76,46 +106,38 @@ const Homepage = () => {
                     href="https://www.facebook.com/T.TECHINTIMACY"
                     class="intro_social_link_links"
                   >
-                    <i class="fab fa-facebook"></i>
+                    <FaFacebook />
                   </a>
                   <a
                     href="www.linkedin.com/in/imtowhidulislam"
                     class="intro_social_link_links"
                   >
-                    <i class="fab fa-linkedin"></i>
+                    <FaLinkedin />
                   </a>
                   <a
                     href="https://github.com/imtowhidulislam"
                     class="intro_social_link_links"
                   >
-                    <i class="fab fa-github"></i>
+                    <FaGithubSquare />
                   </a>
                   <a
                     href="https://www.instagram.com/thisistowhid/"
                     class="intro_social_link_links"
                   >
-                    <i class="fab fa-instagram"></i>
+                    <FaInstagram />
                   </a>
                 </div>
               </div>
             </div>
             <div class="intro_child intro_child-2">
-              <img
-                src="http://unsplash.it/1000/1000?image=254"
-                alt="intro image"
-                class="intro_img"
-              />
+              <img src={Towhid} alt="intro image" class="intro_img" />
             </div>
           </div>
         </header>
         {/*  About Section */}
         <div class="intro_container1 about_section area_definer">
           <div class="intro_child intro_child-2">
-            <img
-              src="../assets/towhid-small.jpg"
-              alt="intro image"
-              class="intro_img about_img"
-            />
+            <img src={Towhid} alt="intro image" class="intro_img about_img" />
           </div>
           <div class="intro_child intro_child-1 about_content">
             <h1 class="intro_title about_title">Towhidul Islam</h1>
@@ -239,10 +261,10 @@ const Homepage = () => {
           <div class="skills1 slider">
             <div class="skill_navigate_container">
               <button class="slider__btn slider__btn--left">
-                <i class="nav fas fa-angle-left"></i>
+                <FaAngleLeft />
               </button>
               <button class="slider__btn slider__btn--right">
-                <i class="nav fas fa-angle-right"></i>
+                <FaAngleRight />
               </button>
             </div>
             <div class="dots"></div>
@@ -262,28 +284,28 @@ const Homepage = () => {
               <div class="footer_row footer-1">
                 <h2>Email</h2>
                 <p>
-                  <i class="fas fa-inbox"></i>Towhidulislam12995@gmail.com
+                  <FiMail /> Towhidulislam12995@gmail.com
                 </p>
                 <p>
-                  <i class="fab fa-facebook"></i> Towhidul Islam
+                  <FaFacebook /> Towhidul Islam
                 </p>
               </div>
               <div class="footer_row footer-2">
                 <h2>Featured</h2>
                 <p>
-                  <i class="fas fa-phone"></i> 01725101880
+                  <FaPhoneAlt /> 01725101880
                 </p>
                 <p>
-                  <i class="fab fa-instagram"></i>thisistowhid
+                  <FaInstagram /> thisistowhid
                 </p>
               </div>
               <div class="footer_row footer-3">
                 <h2>work</h2>
                 <p>
-                  <i class="fab fa-github"></i>github
+                  <FaGithubSquare /> github
                 </p>
                 <p>
-                  <i class="fab fa-linkedin"></i>LinkedIn
+                  <FaLinkedin /> LinkedIn
                 </p>
               </div>
             </div>
@@ -296,12 +318,12 @@ const Homepage = () => {
             <ul class="footer_links_icon">
               <li>
                 <a href="https://github.com/imtowhidulislam">
-                  <i class="fab fa-github"></i>
+                  <FaGithubSquare />
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/T.TECHINTIMACY">
-                  <i class="fab fa-facebook"></i>
+                  <FaFacebook />
                 </a>
               </li>
               <li>
@@ -309,19 +331,19 @@ const Homepage = () => {
                   href="www.linkedin.com/in/imtowhidulislam
           "
                 >
-                  <i class="fab fa-linkedin"></i>
+                  <FaLinkedin />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/thisistowhid/">
-                  <i class="fab fa-instagram"></i>
+                  <FaInstagramSquare />
                 </a>
               </li>
             </ul>
             <p class="footer_copy">
               Copyright{" "}
               <span>
-                <i class="fa-solid fa-copyright"></i>
+                <FaCopyright />
               </span>{" "}
               <span class="footer_date">2022</span> All resource reserve to{" "}
               <span class="name">owhidul Islam</span>

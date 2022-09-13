@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import "../style/navbarStyle.css";
+import "../style/userStyle.css";
 
 const Navbar = () => {
   return (
@@ -11,6 +11,11 @@ const Navbar = () => {
           <ul className="nav_links">
             <li className="nav_list">
               <Link className="link" to="/">
+                Homepage
+              </Link>
+            </li>
+            <li className="nav_list">
+              <Link className="link" to="/signup">
                 signup
               </Link>
             </li>

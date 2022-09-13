@@ -1,0 +1,118 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+/* body {
+  font-family: poppins "sans-sarif";
+  color: white;
+} */
+footer {
+  background-color: #000000;
+}
+.footer-dark {
+}
+.footer-light {
+  background-color: #e9e4e4;
+}
+.footer_copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+}
+.footer_links_icon {
+  display: flex;
+}
+.footer_links_icon i {
+  font-size: clamp(1rem, 5vw + 1rem, 1.4rem);
+}
+.footer_links_icon li + li {
+  margin-left: max(3vh, 0.5rem);
+}
+.name::before {
+  content: "T";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bgc-orange);
+}
+
+.footer-logo {
+  color: orange;
+  font-variant: small-caps;
+  text-align: center;
+  font-size: clamp(0.8rem, 3vw, 1.4rem);
+}
+.fas,
+.fab {
+  /* color: aqua; */
+}
+.area_definer {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.footer {
+  /* padding-inline: 4rem; */
+  padding-block: 6rem;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer_title {
+  margin-bottom: 2rem;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  text-align: left;
+}
+.footer_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  /* border: 2px solid red; */
+}
+.footer_row h2 {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  /* color: orange; */
+  /* border: 2px solid red; */
+  text-align: left;
+}
+.footer_row p i {
+  font-size: unset;
+}
+.footer_row + .footer_row {
+  margin-top: 1rem;
+}
+p i {
+  margin-right: 0.5rem;
+}
+p {
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+@media (min-width: 35rem) {
+  .footer_row > *:nth-child(1) {
+    flex: 1 1 20%;
+  }
+  .footer_row > *:nth-child(2) {
+    flex: 1 1 40%;
+  }
+  .footer_row > *:nth-child(3) {
+    flex: 1 1 30%;
+  }
+}
+@media (max-width: 65rem) {
+  .flex {
+    flex-direction: column;
+  }
+  .footer {
+    padding-inline: 2rem;
+  }
+  .area_definer {
+    padding-inline: 3rem;
+  }
+}
