@@ -1,6 +1,7 @@
 import React from "react";
-
+import { Projects } from "../components/index";
 import { GrInstagram } from "react-icons/gr";
+import Skills from "../pages/Skills";
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -227,6 +228,7 @@ const Homepage = () => {
             </form>
           </div>
           <div class="projects">
+            <Projects />
             {/* <div class="single_project">
             <div class="icon">
               <i class="fab fa-js"></i>
@@ -259,7 +261,8 @@ const Homepage = () => {
       <div class="skill_container">
         <div class="area_definer">
           <div class="skills1 slider">
-            <div class="skill_navigate_container">
+            <Skills />
+            {/*             <div class="skill_navigate_container">
               <button class="slider__btn slider__btn--left">
                 <FaAngleLeft />
               </button>
@@ -267,7 +270,7 @@ const Homepage = () => {
                 <FaAngleRight />
               </button>
             </div>
-            <div class="dots"></div>
+            <div class="dots"></div> */}
           </div>
         </div>
       </div>

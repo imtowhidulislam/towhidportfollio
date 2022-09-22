@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <h2 className="text-blue-300">This is a demo text</h2>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="signup" element={<Signup />} />
