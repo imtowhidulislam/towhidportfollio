@@ -175,7 +175,7 @@ const Signup = () => {
           </p>
         </form>
       </div>
-      <div className="user_container">
+      {/* <div className="user_container">
         {user.map((user) => {
           const { _id, firstName, lastName, userName, email, password } = user;
           return (
@@ -195,7 +195,7 @@ const Signup = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };

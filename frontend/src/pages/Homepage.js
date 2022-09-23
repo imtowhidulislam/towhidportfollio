@@ -262,15 +262,8 @@ const Homepage = () => {
         <div class="area_definer">
           <div class="skills1 slider">
             <Skills />
-            {/*             <div class="skill_navigate_container">
-              <button class="slider__btn slider__btn--left">
-                <FaAngleLeft />
-              </button>
-              <button class="slider__btn slider__btn--right">
-                <FaAngleRight />
-              </button>
-            </div>
-            <div class="dots"></div> */}
+
+            {/* <div class="dots"></div> */}
           </div>
         </div>
       </div>

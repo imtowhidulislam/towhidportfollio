@@ -39,24 +39,6 @@ li {
   overflow: hidden;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  /* height: 30rem; */
-  height: 100%;
-
-  /* background-color: #f88df3; */
-  z-index: -10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  /* THIS creates the animation! */
-  transition: transform 1s;
-}
 .skill_navigate_container {
   position: absolute;
   top: 50%;
@@ -67,7 +49,32 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding-inline: 1rem;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* height: 30rem; */
+  height: 100%;
+  padding-inline: 2rem;
+  /* background-color: #f88df3; */
+  z-index: -10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+.active {
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1.1);
 }
 .slide > img {
   /* Only for images that have different size than slide */
@@ -167,6 +174,18 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+.slider__btn {
+  background-color: hsla(184, 83%, 30%, 0.3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.icon {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 35rem) {

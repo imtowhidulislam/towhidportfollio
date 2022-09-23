@@ -22,7 +22,6 @@ const Projects = () => {
       {project.map((singleProject) => {
         const { _id, title, category, description, sourceLink, gitHub } =
           singleProject;
-
         return (
           <div className="single_project" key={_id}>
             <div className="icon">
