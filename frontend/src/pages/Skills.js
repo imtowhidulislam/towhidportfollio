@@ -24,7 +24,7 @@ const Skills = () => {
         return (
           <div className="skill_slide1 slide" key={_id}>
             <li></li>
-            <h2 className="skill_title">{title}</h2>
+            <h2 className="skill_title text-blue-400">{title}</h2>
             <p className="skill_desc">{desc}</p>
             <h3 className="skill_exp">
               experience : <strong>{year}</strong> years
