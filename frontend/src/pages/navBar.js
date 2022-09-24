@@ -14,11 +14,11 @@ const Navbar = () => {
                 Homepage
               </Link>
             </li>
-            <li className="nav_list">
+            {/* <li className="nav_list">
               <Link className="link" to="/projects">
                 Projects
               </Link>
-            </li>
+            </li> */}
             <li className="nav_list">
               <Link className="link" to="/signup">
                 signup

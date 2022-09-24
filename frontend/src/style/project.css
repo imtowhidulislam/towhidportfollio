@@ -17,6 +17,12 @@
   /* font-family: "Nosifer", cursive; */
   /* font-family: "Red Hat Display", sans-serif; */
 }
+.btn_container button:has(a) {
+  font-size: 1.5rem;
+}
+.btn_container button:has(a):hover {
+  color: pink;
+}
 .icon {
   display: flex;
   align-items: center;

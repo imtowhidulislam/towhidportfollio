@@ -36,7 +36,14 @@ footer {
   font-weight: bold;
   color: var(--bgc-orange);
 }
-
+li a {
+  font-size: 1.2rem;
+  color: rgb(245, 239, 239);
+  transition: color 300ms ease-in;
+}
+li a:hover {
+  color: rgb(14, 168, 240);
+}
 .footer-logo {
   color: orange;
   font-variant: small-caps;
