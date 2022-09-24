@@ -272,6 +272,11 @@ img {
 }
 .intro_social_link_links {
   font-size: clamp(1rem, 5vw, 1.5rem);
+  color: #19cdda;
+  transition: color 300ms ease-in;
+}
+.intro_social_link_links:hover {
+  color: white;
 }
 .intro_social_link_links + .intro_social_link_links {
   margin-left: 1rem;

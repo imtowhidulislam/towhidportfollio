@@ -2,6 +2,7 @@ import React from "react";
 import { Projects } from "../components/index";
 import { GrInstagram } from "react-icons/gr";
 import Skills from "../pages/Skills";
+import Footer from "../pages/Footer";
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -37,48 +38,6 @@ const Homepage = () => {
       <div class="section">
         {/* NavBar Section */}
         <header class="header">
-          {/*           <div class="main_nav ">
-            <div class="nav_container  area_definer">
-              <h2 class="logo">Towhid</h2>
-              <nav>
-                <ul class="nav_links">
-                  <li class="nav_list">
-                    <a href="#" class="nav_link mood-day nav_link_1">
-                      About
-                    </a>
-                  </li>
-                  <li class="nav_list">
-                    <a href="#" class="nav_link mood-day nav_link_2">
-                      Services
-                    </a>
-                  </li>
-                  <li class="nav_list">
-                    <a href="#" class="nav_link mood-day nav_link_3">
-                      Portfolio
-                    </a>
-                  </li>
-                  <li class="nav_list">
-                    <a href="#" class="nav_link mood-day nav_link_4">
-                      Testimonial
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="sing_in">
-                <li class="sign_link">
-                  <a href="./login.html" class="signIn mood-day">
-                    Sign in
-                  </a>
-                </li>
-              </div>
-              <div class="mobile_link">
-                <button class="mobile_btn">
-                  <i class="fas fa-bars"></i>
-                </button>
-              </div>
-            </div>
-          </div> */}
-
           {/* Intro Section */}
           <div class="intro_container area_definer">
             <div class="intro_child intro_child-1">
@@ -268,46 +227,7 @@ const Homepage = () => {
         </div>
       </div>
       {/*  Footer Section */}
-      <footer class="footer">
-        <div class="area_definer flex">
-          <h1 class="footer_logo">Towhid</h1>
-          <div class="footer_content">
-            <h2 class="footer_title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              ea quis ex.
-            </h2>
-            <div class="footer_links">
-              <div class="footer_row footer-1">
-                <h2>Email</h2>
-                <p>
-                  <FiMail /> Towhidulislam12995@gmail.com
-                </p>
-                <p>
-                  <FaFacebook /> Towhidul Islam
-                </p>
-              </div>
-              <div class="footer_row footer-2">
-                <h2>Featured</h2>
-                <p>
-                  <FaPhoneAlt /> 01725101880
-                </p>
-                <p>
-                  <FaInstagram /> thisistowhid
-                </p>
-              </div>
-              <div class="footer_row footer-3">
-                <h2>work</h2>
-                <p>
-                  <FaGithubSquare /> github
-                </p>
-                <p>
-                  <FaLinkedin /> LinkedIn
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <section>
         <div class="area_definer">
           <div class="footer_copyright">
