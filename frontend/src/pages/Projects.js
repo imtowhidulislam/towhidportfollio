@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../style/project.css";
 import { FaGithubSquare, FaLink } from "react-icons/fa";
 import { FiLink } from "react-icons/fi";
-const projectUrl = "http://localhost:3000/project";
+const projectUrl = "http://localhost:3001/project";
 const Projects = () => {
   const [project, setProject] = useState([]);
 

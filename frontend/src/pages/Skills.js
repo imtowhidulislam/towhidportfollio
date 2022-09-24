@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../style/skill.css";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-const skillUrl = "http://localhost:3000/api/skill";
+const skillUrl = "http://localhost:3001/api/skill";
 
 const Skills = () => {
   const [current, setCurrent] = useState(0);
