@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../style/signup.css";
+// import "../style/signupStyle.css";
 import UserData from "./userData";
 const registerUrl = "http://localhost:3000/api/user/register";
 const userUrl = "http://localhost:3000/api/user";

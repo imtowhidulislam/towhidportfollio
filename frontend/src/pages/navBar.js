@@ -1,10 +1,16 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../style/userStyle.css";
 
 const Navbar = () => {
+  const navBar = useRef(null);
+  useEffect(() => {
+    const height = navBar.current.getBoundingClientRect().height;
+    console.log(height);
+  }, []);
+
   return (
-    <div className="main_nav ">
+    <div className="main_nav" ref={navBar}>
       <div className="nav_container  area_definer">
         <h2 className="logo">Towhid</h2>
         <nav>

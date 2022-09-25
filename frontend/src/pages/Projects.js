@@ -33,12 +33,12 @@ const Projects = () => {
             <div className="btn_container">
               <button className="btn hover:bg-slate-100">
                 <a href={sourceLink} className="btn_prj ripple_btn btn-1">
-                  <FaGithubSquare />
+                  <FaGithubSquare className="project_icon" />
                 </a>
               </button>
               <button className="btn">
                 <a href={gitHub} className="btn_prj ripple_btn btn-2">
-                  <FiLink />
+                  <FiLink className="project_icon" />
                 </a>
               </button>
             </div>
