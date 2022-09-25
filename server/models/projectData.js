@@ -5,7 +5,6 @@ const crateProject = new mongoose.Schema(
   {
     icon: {
       type: String,
-      required: true,
       trim: true,
     },
     title: {
