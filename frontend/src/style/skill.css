@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  /* background-color: #ffaacc; */
-}
 li {
   list-style: none;
 }
@@ -13,7 +10,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .area_definer {
   width: 100%;
@@ -23,6 +20,11 @@ li {
 li {
   display: flex;
   justify-content: center;
+}
+.skill_main_title {
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-block: 4rem;
 }
 /* Slider */
 .slider {

@@ -62,6 +62,13 @@
   flex: 1 1 0%;
   height: max-content;
 }
+.project_icon {
+  color: black;
+  transition: color 300ms ease-in;
+}
+.project_icon:hover {
+  color: rgb(243, 243, 245);
+}
 .project_layout > *:nth-child(2) {
   flex: 1 1 100%;
   /* padding: 1rem; */
@@ -119,7 +126,7 @@ label {
   /* align-items: flex-start; */
   /* justify-content: center; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   /* place-items: center; */
   gap: 2rem;
 
@@ -149,7 +156,7 @@ label {
 .project_dsc {
   text-align: center;
   text-transform: capitalize;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   padding-block: 1rem;
   font-size: clamp(0.7rem, 3vw, 0.9rem);
 }

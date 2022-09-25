@@ -16,6 +16,7 @@ a {
 }
 .contianer {
   width: min(100%, 5vw, 600px);
+  border: 2px solid blue;
 }
 form {
   padding: 2rem;

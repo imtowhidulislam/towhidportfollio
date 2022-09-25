@@ -94,8 +94,7 @@ img {
   padding-block: 2rem;
   padding-inline: 4rem;
   justify-content: space-between;
-  /* border: 2px solid red; */
-  /* width: 100%; */
+  width: 100%;
 }
 .main_nav {
   /* background-color: var(--bgc-orange); */

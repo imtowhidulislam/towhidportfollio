@@ -28,14 +28,6 @@ p {
   width: max(90%, 5vw, 1200px);
   margin-inline: auto;
 }
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* height: 100vh; */
-  /* overflow-x: hidden; */
-}
 #header {
   /* background-color: #345aaf; */
   /* position: fixed; */
