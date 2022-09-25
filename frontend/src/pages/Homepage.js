@@ -6,6 +6,7 @@ import Footer from "../pages/Footer";
 import IntroSection from "./introSection";
 import About from "./About";
 import ProjectForm from "./projectForm";
+import FooterCopyright from "./footercopyright";
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -72,48 +73,7 @@ const Homepage = () => {
       </div>
       {/*  Footer Section */}
       <Footer />
-      <section>
-        <div class="area_definer">
-          <div class="footer_copyright">
-            <ul class="footer_links_icon">
-              <li>
-                <a href="https://github.com/imtowhidulislam">
-                  <FaGithubSquare />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/T.TECHINTIMACY">
-                  <FaFacebook />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="www.linkedin.com/in/imtowhidulislam
-          "
-                >
-                  <FaLinkedin />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/thisistowhid/">
-                  <FaInstagramSquare />
-                </a>
-              </li>
-            </ul>
-            <p class="footer_copy">
-              Copyright{" "}
-              <span>
-                <FaCopyright />
-              </span>{" "}
-              <span class="footer_date">2022</span> All resource reserve to{" "}
-              <span class="name">owhidul Islam</span>
-            </p>
-            <h2 class="footer-logo">
-              <span>Towhid</span>
-            </h2>
-          </div>
-        </div>
-      </section>
+      <FooterCopyright />
     </div>
   );
 };
