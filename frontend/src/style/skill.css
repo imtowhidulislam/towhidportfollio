@@ -14,8 +14,9 @@ li {
 }
 .area_definer {
   width: 100%;
-  max-width: 80rem;
-  padding-inline: 5rem;
+  max-width: 100rem;
+  /* padding-inline: 5rem; */
+  margin: 0 auto;
 }
 li {
   display: flex;

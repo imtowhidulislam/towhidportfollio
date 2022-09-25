@@ -19,7 +19,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 0.5rem;
+  padding-block: 0.25rem;
+  /* gap: 2rem; */
+}
+.footer_copy {
+  text-align: center;
 }
 .footer_links_icon {
   display: flex;
@@ -100,7 +104,9 @@ p {
   font-size: 0.7rem;
   text-align: left;
 }
-
+.footer_end {
+  padding-block: 1rem;
+}
 @media (min-width: 35rem) {
   .footer_row > *:nth-child(1) {
     flex: 1 1 20%;
@@ -117,9 +123,19 @@ p {
     flex-direction: column;
   }
   .footer {
-    padding-inline: 2rem;
+    /* padding-inline: 2rem; */
   }
   .area_definer {
-    padding-inline: 3rem;
+    /* padding-inline: 3rem; */
+  }
+}
+@media (max-width: 45rem) {
+  .footer_copyright {
+    flex-direction: column;
+    /* background-color: #fff; */
+  }
+  .footer_copy {
+    text-align: center;
+    padding-block: 0.5rem;
   }
 }
