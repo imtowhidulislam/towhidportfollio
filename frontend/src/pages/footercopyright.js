@@ -1,26 +1,18 @@
 import React from "react";
 import {
-  FaFacebookSquare,
   FaGithubSquare,
-  FaTwitterSquare,
   FaCopyright,
-  FaPhoneAlt,
-  FaMoon,
   FaFacebook,
   FaLinkedin,
-  FaInstagram,
-  FaAngleLeft,
-  FaAngleRight,
   FaInstagramSquare,
 } from "react-icons/fa";
-import { FiArrowUp, FiMail } from "react-icons/fi";
-import { BsSunFill } from "react-icons/bs";
+import "../style/container.css";
 
 const FooterCopyright = () => {
   return (
     <>
       <section className="footer_end">
-        <div class="area_definer">
+        <div class="container" style={{ paddingBlock: "unset" }}>
           <div class="footer_copyright">
             <ul class="footer_links_icon">
               <li>

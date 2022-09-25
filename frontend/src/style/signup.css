@@ -12,17 +12,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: calc(100vh - 123px); */
+  height: calc(100vh - 123px);
 }
-.container {
-  /* width: min(100%, 5vw, 500px); */
-  width: 100%;
-  max-width: 600px;
-  padding: 3rem;
+.signup_container {
+  padding: 2rem;
 }
+
 form {
   /* border: 2px solid blue; */
-  /* padding: 2rem; */
+  padding: 2rem;
   border-radius: 1rem;
   background: linear-gradient(to left bottom, #efcd08, #0cebeb);
   box-shadow: 0px 0px 15px 2px hsl(10 20% 10% / 0.3);

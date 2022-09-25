@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/signup.css";
+
 const loginUrl = "http://localhost:3000/api/user/login";
 const Login = () => {
   const [input, setInput] = useState({
@@ -31,8 +32,8 @@ const Login = () => {
     }
   };
   return (
-    <section class="form_container">
-      <div class="container">
+    <div class="signup_container">
+      <section class="form_container">
         <form action="" onSubmit={handleSubmit}>
           <h2 class="form_title">Sing in</h2>
           <div class="input_area">
@@ -71,8 +72,8 @@ const Login = () => {
             </span>
           </p>
         </form>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

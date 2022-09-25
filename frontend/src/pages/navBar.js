@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../style/userStyle.css";
+import "../style/container.css";
 
 const Navbar = () => {
   const navBar = useRef(null);
@@ -11,7 +12,10 @@ const Navbar = () => {
 
   return (
     <div className="main_nav" ref={navBar}>
-      <div className="nav_container  area_definer">
+      <div
+        className="nav_container  container"
+        style={{ paddingBlock: "unset" }}
+      >
         <h2 className="logo">Towhid</h2>
         <nav>
           <ul className="nav_links">

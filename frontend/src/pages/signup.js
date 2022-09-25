@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "../style/signup.css";
 // import "../style/signupStyle.css";
+import "../style/signup.css";
 import UserData from "./userData";
 const registerUrl = "http://localhost:3000/api/user/register";
 const userUrl = "http://localhost:3000/api/user";
@@ -102,8 +102,8 @@ const Signup = () => {
   }, [user]);
 
   return (
-    <section class="form_container">
-      <div class="container">
+    <div class="signup_container1">
+      <section class="form_container">
         <form action="" onSubmit={handleSubmit}>
           <h2 class="form_title">Sing up</h2>
           <div class="input_area">
@@ -175,29 +175,8 @@ const Signup = () => {
             </span>
           </p>
         </form>
-      </div>
-      {/* <div className="user_container">
-        {user.map((user) => {
-          const { _id, firstName, lastName, userName, email, password } = user;
-          return (
-            <div className="userData">
-              <div key={_id} className="">
-                <p>
-                  {firstName} {lastName}
-                </p>
-                <h4>{userName}</h4>
-                <p>{email}</p>
-                <div>
-                  <button className="userBtn" onClick={() => remove(_id)}>
-                    remove
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div> */}
-    </section>
+      </section>
+    </div>
   );
 };
 

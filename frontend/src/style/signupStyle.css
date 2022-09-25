@@ -14,9 +14,10 @@ a {
   justify-content: center;
   height: 100vh;
 }
-.contianer {
+.signup_container {
   width: min(100%, 5vw, 600px);
   border: 2px solid blue;
+  padding: 2rem;
 }
 form {
   padding: 2rem;

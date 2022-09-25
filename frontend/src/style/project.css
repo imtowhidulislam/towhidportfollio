@@ -1,5 +1,5 @@
 .project_container {
-  padding: 3rem;
+  /* padding: 3rem; */
   /* display: grid; */
   /* place-items: center; */
 }
@@ -121,18 +121,9 @@ label {
 }
 
 .projects {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* align-items: flex-start; */
-  /* justify-content: center; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  /* place-items: center; */
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 2rem;
-
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-position: left center; */
 }
 
 .single_project {

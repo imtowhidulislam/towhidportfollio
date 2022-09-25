@@ -1,4 +1,7 @@
 import React from "react";
+import "../style/footer.css";
+import "../style/container.css";
+
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -20,7 +23,7 @@ const Footer = () => {
   return (
     <>
       <footer class="footer">
-        <div class="area_definer flex">
+        <div class="flex container">
           <h1 class="footer_logo">Towhid</h1>
           <div class="footer_content">
             <h2 class="footer_title">
