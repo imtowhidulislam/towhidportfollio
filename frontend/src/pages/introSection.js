@@ -21,7 +21,12 @@ import "../style/container.css";
 const IntroSection = () => {
   return (
     <>
-      <header class="header">
+      <header
+        class="header"
+        style={{
+          border: "2px solid blue",
+        }}
+      >
         <div className="container">
           <div class="intro_container area_definer1">
             <div class="intro_child intro_child-1">

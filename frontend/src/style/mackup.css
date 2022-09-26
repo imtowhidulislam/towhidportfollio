@@ -55,11 +55,11 @@ img {
   display: block;
   width: 100%;
 }
-.area_definer-demo {
-  max-width: 80rem;
-  width: 100%;
-  margin: 0 auto;
+.header {
+  /* background-attachment: scroll; */
+  background-image: url(http://unsplash.it/1920/1080?image=766);
 }
+
 .mood_btn {
   background-color: rgb(211, 210, 210);
   position: fixed;
@@ -217,7 +217,7 @@ img {
 .about_content {
   width: 100%;
   height: 100%;
-  background-color: #332211;
+  /* background-color: #332211; */
 }
 .about_img {
   max-width: 1000px;

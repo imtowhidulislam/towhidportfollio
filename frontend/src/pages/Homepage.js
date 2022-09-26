@@ -14,8 +14,6 @@ const Homepage = () => {
   return (
     <div class="dark-mood">
       <div class="section">
-        {/* NavBar Section */}
-
         <IntroSection />
         {/*  About Section */}
         <About />
@@ -28,6 +26,9 @@ const Homepage = () => {
       {/*  Footer Section */}
       <Footer />
       <FooterCopyright />
+      <div className="demo">
+        <img src="http://unsplash.it/1000/1000?image=564" alt="" />
+      </div>
     </div>
   );
 };
