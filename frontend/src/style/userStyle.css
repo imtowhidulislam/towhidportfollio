@@ -25,8 +25,8 @@ p {
   padding: 0;
 }
 .container {
-  width: max(90%, 5vw, 1200px);
-  margin-inline: auto;
+  /* width: max(90%, 5vw, 1200px); */
+  /* margin-inline: auto; */
 }
 #header {
   /* background-color: #345aaf; */

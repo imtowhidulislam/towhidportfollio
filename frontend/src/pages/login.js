@@ -35,54 +35,56 @@ const Login = () => {
     }
   };
   return (
-    <div className="signup_container">
-      <section className="form_container">
-        <form action="" onSubmit={handleSubmit}>
-          <h2 className="form_title">Sing in</h2>
-          <div className="input_area">
-            <label for="email">Email :</label>
-            <input
-              type="email"
-              className="email"
-              name="email"
-              value={input.email}
-              placeholder="enter email"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input_area">
-            <label for="password">Password :</label>
-            <input
-              type="password"
-              className="password"
-              name="password"
-              value={input.password}
-              placeholder="enter password"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form_btn-container">
-            <button
-              className="btn formBtn"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              sign in
-            </button>
-          </div>
-          <p className="signup_text">
-            Don't have any account ?
-            <span>
-              <a target="_blank" href="./login.html">
-                sign up
-              </a>
-            </span>
-          </p>
-        </form>
-      </section>
-      <Footer />
-      <FooterCopyright />
-    </div>
+    <>
+      <div className="signup_container">
+        <section className="form_container">
+          <form action="" onSubmit={handleSubmit}>
+            <h2 className="form_title">Sing in</h2>
+            <div className="input_area">
+              <label for="email">Email :</label>
+              <input
+                type="email"
+                className="email"
+                name="email"
+                value={input.email}
+                placeholder="enter email"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input_area">
+              <label for="password">Password :</label>
+              <input
+                type="password"
+                className="password"
+                name="password"
+                value={input.password}
+                placeholder="enter password"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form_btn-container">
+              <button
+                className="btn formBtn"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                sign in
+              </button>
+            </div>
+            <p className="signup_text">
+              Don't have any account ?
+              <span>
+                <a target="_blank" href="./login.html">
+                  sign up
+                </a>
+              </span>
+            </p>
+          </form>
+        </section>
+        <Footer />
+        <FooterCopyright />
+      </div>
+    </>
   );
 };
 
