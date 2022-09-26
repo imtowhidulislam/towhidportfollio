@@ -4,7 +4,6 @@
 .clock {
   position: relative;
   position: absolute;
-
   width: 3rem;
   height: 3rem;
   top: 5rem;
@@ -41,6 +40,10 @@
   font-weight: bold;
   z-index: -100;
   transition: right 300ms ease-in, opacity 300ms ease-in;
+}
+.phase {
+  color: hsla(18, 90%, 72%, 0.945);
+  padding-left: 0.5rem;
 }
 .clock:hover .times {
   right: 3rem;
