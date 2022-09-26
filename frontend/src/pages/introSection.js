@@ -19,10 +19,12 @@ import Towhid from "../assets/towhid-small.jpg";
 import "../style/container.css";
 
 import heroImage1 from "../assets/heroimage1.jpg";
+import Time from "./time";
 const IntroSection = () => {
   return (
     <>
       <header className="header">
+        <Time />
         <div className="container">
           <div className="intro_container">
             <div className="intro_child intro_child-1">

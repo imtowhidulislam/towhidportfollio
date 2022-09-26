@@ -19,11 +19,23 @@ a {
 }
 
 form {
-  /* border: 2px solid blue; */
+  border: 2px solid rgb(229, 229, 233);
   padding: 2rem;
   border-radius: 1rem;
   background: linear-gradient(to left bottom, #efcd08, #0cebeb);
   box-shadow: 0px 0px 15px 2px hsl(10 20% 10% / 0.3);
+  animation: scaleUp 300ms ease-in 1 forwards;
+  transition: animation 300ms ease-in-out;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }
 .form_title {
   text-align: center;

@@ -1,13 +1,11 @@
-.time {
-  position: relative;
-}
 .clock {
-  position: relative;
+  /* position: relative; */
   position: absolute;
   width: 3rem;
   height: 3rem;
   top: 5rem;
   right: 0%;
+  /* overflow: hidden; */
   background-color: hsla(18, 90%, 72%, 0.945);
   color: #ffff;
   font-size: 4rem;
@@ -30,6 +28,7 @@
   width: max-content;
   height: 3rem;
   background-color: #fff;
+
   right: -10rem;
   padding-inline: 1rem;
   color: #222;

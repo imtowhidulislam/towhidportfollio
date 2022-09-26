@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaClock } from "react-icons/fa";
 
 import "../style/time.css";
+import "../style/mackup.css";
 const Time = () => {
   const [times, setTimes] = useState("");
   const [phase, setPhase] = useState(0);

@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Time />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="signup" element={<Signup />} />

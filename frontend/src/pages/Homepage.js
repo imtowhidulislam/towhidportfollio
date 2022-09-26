@@ -27,7 +27,7 @@ const Homepage = () => {
       <Footer />
       <FooterCopyright />
       <div className="demo">
-        <img src="http://unsplash.it/1000/1000?image=564" alt="" />
+        {/* <img src="http://unsplash.it/1000/1000?image=564" alt="" /> */}
       </div>
     </div>
   );
