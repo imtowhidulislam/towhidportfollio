@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../style/signup.css";
+import Footer from "./Footer";
+import FooterCopyright from "./footercopyright";
 
 const loginUrl = "http://localhost:3001/api/user/login";
 const Login = () => {
@@ -78,6 +80,8 @@ const Login = () => {
           </p>
         </form>
       </section>
+      <Footer />
+      <FooterCopyright />
     </div>
   );
 };

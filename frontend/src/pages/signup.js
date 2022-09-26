@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 // import "../style/signupStyle.css";
 import "../style/signup.css";
+import "../style/footer.css";
+
+import Footer from "./Footer";
+import FooterCopyright from "./footercopyright";
 import UserData from "./userData";
 const registerUrl = "http://localhost:3001/api/user/register";
 const userUrl = "http://localhost:3001/api/user";
@@ -102,7 +106,7 @@ const Signup = () => {
   }, []);
 
   return (
-    <div class="signup_container1">
+    <div class="signup_container">
       <section class="form_container">
         <form action="" onSubmit={handleSubmit}>
           <h2 class="form_title">Sing up</h2>
@@ -176,6 +180,8 @@ const Signup = () => {
           </p>
         </form>
       </section>
+      <Footer />
+      <FooterCopyright />
     </div>
   );
 };

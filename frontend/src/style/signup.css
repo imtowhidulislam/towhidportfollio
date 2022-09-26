@@ -12,10 +12,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 123px);
+  min-height: 100vh;
 }
 .signup_container {
-  padding: 2rem;
+  /* padding-block: 2rem; */
 }
 
 form {

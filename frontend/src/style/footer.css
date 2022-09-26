@@ -9,6 +9,7 @@
 } */
 footer {
   background-color: #000000;
+  color: white;
 }
 .footer-dark {
 }
@@ -65,7 +66,7 @@ li a:hover {
 }
 .footer {
   /* padding-inline: 4rem; */
-  padding-block: 6rem;
+  padding-block: 3rem;
 }
 .flex {
   display: flex;
@@ -106,6 +107,8 @@ p {
 }
 .footer_end {
   padding-block: 1rem;
+  background-color: #111429;
+  color: white;
 }
 @media (min-width: 35rem) {
   .footer_row > *:nth-child(1) {
