@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaGithubSquare,
   FaCopyright,
@@ -9,12 +9,23 @@ import {
 import "../style/container.css";
 
 const FooterCopyright = () => {
+  const [year, setYear] = useState(null);
+
+  const setCurrentYear = () => {
+    const thisYear = new Date().getFullYear();
+    console.log(thisYear);
+    setYear(thisYear);
+  };
+  useEffect(() => {
+    setCurrentYear();
+  }, []);
+
   return (
     <>
       <section className="footer_end">
-        <div class="container" style={{ paddingBlock: "unset" }}>
-          <div class="footer_copyright">
-            <ul class="footer_links_icon">
+        <div className="container" style={{ paddingBlock: "unset" }}>
+          <div className="footer_copyright">
+            <ul className="footer_links_icon">
               <li>
                 <a href="https://github.com/imtowhidulislam">
                   <FaGithubSquare />
@@ -39,15 +50,15 @@ const FooterCopyright = () => {
                 </a>
               </li>
             </ul>
-            <p class="footer_copy">
+            <p className="footer_copy">
               Copyright{" "}
               <span>
                 <FaCopyright />
               </span>{" "}
-              <span class="footer_date">2022</span> All resource reserve to{" "}
-              <span class="name">owhidul Islam</span>
+              <span className="footer_date text-blue-600">{year}</span> All
+              resource reserve to <span className="name">owhidul Islam</span>
             </p>
-            <h2 class="footer-logo">
+            <h2 className="footer-logo">
               <span>Towhid</span>
             </h2>
           </div>
