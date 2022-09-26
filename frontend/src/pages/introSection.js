@@ -22,16 +22,7 @@ import heroImage1 from "../assets/heroimage1.jpg";
 const IntroSection = () => {
   return (
     <>
-      <header
-        className="header"
-        style={{
-          border: "2px solid blue",
-          // backgroundImage: `url(${heroImage1})`,
-          // backgroundRepeat: "noreapet",
-          // backgroundSize: "cover",
-          // height: "100%",
-        }}
-      >
+      <header className="header">
         <div className="container">
           <div className="intro_container">
             <div className="intro_child intro_child-1">

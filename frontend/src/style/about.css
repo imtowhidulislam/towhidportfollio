@@ -6,7 +6,7 @@
   --bgc-body: #0b071d;
 }
 .about_section {
-  border-top: 2px solid white;
+  /* border-top: 2px solid white; */
   padding-block: 10rem;
   /* height: 100vh; */
 }

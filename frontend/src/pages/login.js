@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../style/signup.css";
 
-const loginUrl = "http://localhost:3000/api/user/login";
+const loginUrl = "http://localhost:3001/api/user/login";
 const Login = () => {
   const [input, setInput] = useState({
     email: "",
@@ -14,6 +14,7 @@ const Login = () => {
     e.preventDefault();
   };
   const handleSubmit = async (e) => {
+    console.log("login");
     const response = await fetch(loginUrl, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -32,38 +33,42 @@ const Login = () => {
     }
   };
   return (
-    <div class="signup_container">
-      <section class="form_container">
+    <div className="signup_container">
+      <section className="form_container">
         <form action="" onSubmit={handleSubmit}>
-          <h2 class="form_title">Sing in</h2>
-          <div class="input_area">
+          <h2 className="form_title">Sing in</h2>
+          <div className="input_area">
             <label for="email">Email :</label>
             <input
               type="email"
-              class="email"
+              className="email"
               name="email"
               value={input.email}
               placeholder="enter email"
               onChange={handleChange}
             />
           </div>
-          <div class="input_area">
+          <div className="input_area">
             <label for="password">Password :</label>
             <input
               type="password"
-              class="password"
+              className="password"
               name="password"
               value={input.password}
               placeholder="enter password"
               onChange={handleChange}
             />
           </div>
-          <div class="form_btn-container">
-            <button class="btn formBtn" type="submit" onClick={handleSubmit}>
+          <div className="form_btn-container">
+            <button
+              className="btn formBtn"
+              type="submit"
+              onClick={handleSubmit}
+            >
               sign in
             </button>
           </div>
-          <p class="signup_text">
+          <p className="signup_text">
             Don't have any account ?
             <span>
               <a target="_blank" href="./login.html">

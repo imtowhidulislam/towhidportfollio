@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 // import "../style/signupStyle.css";
 import "../style/signup.css";
 import UserData from "./userData";
-const registerUrl = "http://localhost:3000/api/user/register";
-const userUrl = "http://localhost:3000/api/user";
+const registerUrl = "http://localhost:3001/api/user/register";
+const userUrl = "http://localhost:3001/api/user";
 const Signup = () => {
   const [existingUser, setExistingUser] = useState([]);
   const [input, setInput] = useState({
@@ -99,7 +99,7 @@ const Signup = () => {
   useEffect(() => {
     showAllUser();
     console.log(user);
-  }, [user]);
+  }, []);
 
   return (
     <div class="signup_container1">
