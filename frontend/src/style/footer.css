@@ -74,6 +74,8 @@ li a:hover {
   margin-bottom: 2rem;
   font-size: clamp(1.2rem, 5vw, 2rem);
   text-align: left;
+  /* text-transform: capitalize; */
+  font-variant: small-caps;
 }
 .footer_row {
   display: flex;

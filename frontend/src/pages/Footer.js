@@ -27,8 +27,7 @@ const Footer = () => {
           <h1 class="footer_logo">Towhid</h1>
           <div class="footer_content">
             <h2 class="footer_title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              ea quis ex.
+              For Any Kind Of Query follow Or Contact Me On The Given Links.
             </h2>
             <div class="footer_links big_screen">
               <div class="footer_row footer-1">
