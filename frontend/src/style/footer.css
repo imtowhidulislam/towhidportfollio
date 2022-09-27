@@ -55,10 +55,6 @@ li a:hover {
   text-align: center;
   font-size: clamp(0.8rem, 3vw, 1.4rem);
 }
-.fas,
-.fab {
-  /* color: aqua; */
-}
 .area_definer-demo {
   width: 100%;
   max-width: 100rem;
@@ -110,6 +106,20 @@ p {
   background-color: #111429;
   color: white;
 }
+.big_screen {
+  display: none;
+}
+.small_screen .footer_row {
+  flex-direction: column;
+  align-items: start;
+}
+.small_screen .footer_row h2 {
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+.small_screen .footer_row + .footer_row {
+  margin-top: 2rem;
+}
+
 @media (min-width: 35rem) {
   .footer_row > *:nth-child(1) {
     flex: 1 1 20%;
@@ -119,6 +129,12 @@ p {
   }
   .footer_row > *:nth-child(3) {
     flex: 1 1 30%;
+  }
+  .small_screen {
+    display: none;
+  }
+  .big_screen {
+    display: block;
   }
 }
 @media (max-width: 65rem) {
@@ -141,4 +157,6 @@ p {
     text-align: center;
     padding-block: 0.5rem;
   }
+}
+@media (max-width: 35rem) {
 }

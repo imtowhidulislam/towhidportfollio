@@ -30,7 +30,36 @@ const Footer = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               ea quis ex.
             </h2>
-            <div class="footer_links">
+            <div class="footer_links big_screen">
+              <div class="footer_row footer-1">
+                <h2>Email</h2>
+                <p>
+                  <FiMail /> Towhidulislam12995@gmail.com
+                </p>
+                <p>
+                  <FaFacebook /> Towhidul Islam
+                </p>
+              </div>
+              <div class="footer_row footer-2">
+                <h2>Featured</h2>
+                <p>
+                  <FaPhoneAlt /> 01725101880
+                </p>
+                <p>
+                  <FaInstagram /> thisistowhid
+                </p>
+              </div>
+              <div class="footer_row footer-3">
+                <h2>work</h2>
+                <p>
+                  <FaGithubSquare /> github
+                </p>
+                <p>
+                  <FaLinkedin /> LinkedIn
+                </p>
+              </div>
+            </div>
+            <div class="footer_links small_screen">
               <div class="footer_row footer-1">
                 <h2>Email</h2>
                 <p>
