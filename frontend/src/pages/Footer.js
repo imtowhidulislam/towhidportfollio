@@ -18,13 +18,17 @@ import {
 } from "react-icons/fa";
 import { FiArrowUp, FiMail } from "react-icons/fi";
 import { BsSunFill } from "react-icons/bs";
+import Logo from "../assets/webexplainerLogo.svg";
 
 const Footer = () => {
   return (
     <>
       <footer class="footer">
         <div class="flex container">
-          <h1 class="footer_logo">Towhid</h1>
+          {/* <h1 class="footer_logo">Towhid</h1> */}
+          <div className="footer_logo">
+            <img src={Logo} alt="footer Logo" />
+          </div>
           <div class="footer_content">
             <h2 class="footer_title">
               For Any Kind Of Query follow Or Contact Me On The Given Links.

@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
-import "../style/userStyle.css";
+// import "../style/userStyle.css";
 import "../style/container.css";
+import "../style/navbarStyle.css";
+import Logo from "../assets/webexplainerLogo.svg";
 
 const Navbar = () => {
   const navBar = useRef(null);
@@ -16,7 +18,9 @@ const Navbar = () => {
         className="nav_container  container"
         style={{ paddingBlock: "unset" }}
       >
-        <h2 className="logo">Towhid</h2>
+        <div className="logo">
+          <img src={Logo} alt="" />
+        </div>
         <nav>
           <ul className="nav_links">
             <li className="nav_list">

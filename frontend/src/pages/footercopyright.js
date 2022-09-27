@@ -7,6 +7,7 @@ import {
   FaInstagramSquare,
 } from "react-icons/fa";
 import "../style/container.css";
+import Logo from "../assets/webexplainerFavicon1.svg";
 
 const FooterCopyright = () => {
   const [year, setYear] = useState(null);
@@ -59,7 +60,9 @@ const FooterCopyright = () => {
               resource reserve to <span className="name">owhidul Islam</span>
             </p>
             <h2 className="footer-logo">
-              <span>Towhid</span>
+              <span>
+                <img src={Logo} alt="Logo" />
+              </span>
             </h2>
           </div>
         </div>
