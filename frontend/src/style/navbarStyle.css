@@ -176,9 +176,31 @@ img {
 .mobile_link {
   display: none;
 }
+.mobile_nav {
+  display: none;
+}
+.mobIcon * {
+  font-size: 1.3rem;
+  animation: mobileAnimaiton 300ms ease-in 1 forwards;
+  transition: animaiton 300ms ease-in;
+  color: #eeeeee;
+}
+@keyframes mobileAnimaiton {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @media (max-width: 38rem) {
   nav,
   .sign_link {
+    display: none;
+  }
+  .desktop_nav {
     display: none;
   }
   .mobile_link {
