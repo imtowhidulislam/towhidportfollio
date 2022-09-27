@@ -185,6 +185,7 @@ img {
   transition: animaiton 300ms ease-in;
   color: #eeeeee;
 }
+
 @keyframes mobileAnimaiton {
   0% {
     transform: scale(0);
@@ -196,15 +197,46 @@ img {
   }
 }
 @media (max-width: 38rem) {
-  nav,
+  /* nav,
   .sign_link {
     display: none;
+  } */
+  .mobile_link {
+    z-index: 999;
   }
   .desktop_nav {
     display: none;
   }
-  .mobile_link {
+  .mobile_nav {
     display: block;
+    position: fixed;
+    background-color: hsla(340, 13%, 14%, 0.671);
+    top: 0%;
+    right: 0%;
+    display: block;
+    height: 100vh;
+    inset: 0% 0% 0% 100%;
+    padding-top: 8rem;
+    backdrop-filter: blur(1rem);
+    z-index: 10;
+    transition: inset 300ms ease-in;
+  }
+  .mobile_nav-active {
+    inset: 0% 0% 0% 40%;
+  }
+  .mobile_nav .nav_links1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-inline: 4rem;
+  }
+  .link1 {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+  .mobile_nav .nav_list1 + .nav_list1 {
+    margin-left: 0rem;
   }
 }
 

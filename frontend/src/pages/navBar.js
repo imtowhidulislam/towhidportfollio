@@ -49,68 +49,66 @@ const Navbar = () => {
           <div className="mobile_link">
             <button className="mobile_btn">
               <li onClick={changeIcon} className="mobIcon">
-                {mobIcon ? <FaBars /> : <GiCrossedBones />}
+                {mobIcon ? (
+                  <FaBars className="bars" />
+                ) : (
+                  <GiCrossedBones className="cross" />
+                )}
               </li>
             </button>
           </div>
         ) : (
-          <>
-            <nav className="mobile_nav">
-              <ul className="nav_links">
-                <li className="nav_list">
-                  <Link className="link" to="/">
-                    Homepage
-                  </Link>
-                </li>
-                {/* <li className="nav_list">
+          <nav className="desktop_nav">
+            <ul className="nav_links">
+              <li className="nav_list">
+                <Link className="link" to="/">
+                  Homepage
+                </Link>
+              </li>
+              {/* <li className="nav_list">
               <Link className="link" to="/projects">
                 Projects
               </Link>
             </li> */}
-                <li className="nav_list">
-                  <Link className="link" to="/signup">
-                    signup
-                  </Link>
-                </li>
-                <li className="nav_list">
-                  <Link className="link" to="/login">
-                    Login
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-            <nav className="desktop_nav">
-              <ul className="nav_links">
-                <li className="nav_list">
-                  <Link className="link" to="/">
-                    Homepage
-                  </Link>
-                </li>
-                {/* <li className="nav_list">
-              <Link className="link" to="/projects">
-                Projects
-              </Link>
-            </li> */}
-                <li className="nav_list">
-                  <Link className="link" to="/signup">
-                    signup
-                  </Link>
-                </li>
-                <li className="nav_list">
-                  <Link className="link" to="/login">
-                    Login
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </>
+              <li className="nav_list">
+                <Link className="link" to="/signup">
+                  signup
+                </Link>
+              </li>
+              <li className="nav_list">
+                <Link className="link" to="/login">
+                  Login
+                </Link>
+              </li>
+            </ul>
+          </nav>
         )}
-
-        {/* <div className="mobile_link">
-          <button className="mobile_btn">
-            <i className="fas fa-bars"></i>
-          </button>
-        </div> */}
+        <div
+          className={mobIcon ? "mobile_nav" : "mobile_nav mobile_nav-active"}
+        >
+          <ul className="nav_links1">
+            <li className="nav_list1">
+              <Link className="link1" to="/">
+                Homepage
+              </Link>
+            </li>
+            {/* <li className="nav_list1">
+              <Link className="link1" to="/projects">
+                Projects
+              </Link>
+            </li> */}
+            <li className="nav_list1">
+              <Link className="link1" to="/signup">
+                signup
+              </Link>
+            </li>
+            <li className="nav_list1">
+              <Link className="link1" to="/login">
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
         <Outlet />
       </div>
     </div>
