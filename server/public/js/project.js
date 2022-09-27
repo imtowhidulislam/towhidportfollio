@@ -13,7 +13,7 @@ const recentProject = document.querySelector(".recent_projects");
 
 console.log(recentProject);
 
-const url1 = "http://localhost:3000/project/";
+const url1 = "http://localhost:3001/project/";
 // * sorting array and showing projects:::
 const randomImage = Math.floor(Math.random() * 99 + 1);
 const sortArr = (arr) => {
@@ -89,10 +89,10 @@ const showProject = async () => {
             <h4 class="project_ctg">${category}</h4>
             <p class="project_dsc">${description}</p>
             <div class="btn_container">
-              <a href="${sourceLink}" target="_blank" class="btn_prj btn-1"
+              <a href="${gitHub}" target="_blank" class="btn_prj btn-1"
                 ><i class="fas fa-code"></i
               ></a>
-              <a href="${gitHub}" target="_blank" class="btn_prj btn-2"
+              <a href="${sourceLink}" target="_blank" class="btn_prj btn-2"
                 ><i class="fab fa-github"></i
               ></a>
             </div>

@@ -6,6 +6,7 @@ import "../style/navbarStyle.css";
 import Logo from "../assets/webexplainerLogo.svg";
 import { FaBars, FaCross } from "react-icons/fa";
 import { GiCrossedBones } from "react-icons/gi";
+import { HiBars3CenterLeft } from "react-icons/hi";
 
 const Navbar = () => {
   const navBar = useRef(null);

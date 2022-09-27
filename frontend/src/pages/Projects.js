@@ -48,15 +48,15 @@ const Projects = () => {
                     <p className="project_dsc">{description}</p>
                     <div className="btn_container">
                       <button className="btn hover:bg-slate-100">
-                        <a
-                          href={sourceLink}
-                          className="btn_prj ripple_btn btn-1"
-                        >
+                        <a href={gitHub} className="btn_prj ripple_btn btn-1">
                           <FaGithubSquare className="project_icon" />
                         </a>
                       </button>
                       <button className="btn">
-                        <a href={gitHub} className="btn_prj ripple_btn btn-2">
+                        <a
+                          href={sourceLink}
+                          className="btn_prj ripple_btn btn-2"
+                        >
                           <FiLink className="project_icon" />
                         </a>
                       </button>
