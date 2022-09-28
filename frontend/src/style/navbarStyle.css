@@ -112,6 +112,22 @@ img {
 .nav_links {
   display: flex;
 }
+.register_link {
+  display: flex;
+}
+.logout_btn {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: color 300ms ease-in;
+}
+.desk_logout {
+}
+.logout_btn:hover {
+  color: #3d8ed1;
+}
 .nav_list + .nav_list {
   margin-left: 1rem;
 }

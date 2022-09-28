@@ -17,7 +17,7 @@ const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, { userDB: null });
 
   useEffect(() => {
-    const isUserExist = JSON.parse(localStorage.getItem("userDB"));
+    const isUserExist = JSON.parse(localStorage.getItem("user"));
     if (isUserExist) dispatch({ type: "LOGIN", payload: isUserExist });
   }, []);
   return (

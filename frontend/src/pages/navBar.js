@@ -7,19 +7,27 @@ import Logo from "../assets/webexplainerLogo.svg";
 import { FaBars, FaCross } from "react-icons/fa";
 import { GiCrossedBones } from "react-icons/gi";
 import { HiBars3CenterLeft } from "react-icons/hi";
+import { useLogout } from "../hooks/useLogout";
 
 const Navbar = () => {
+  const { logout } = useLogout();
   const navBar = useRef(null);
   const [width, setWidth] = useState(0);
   const [mobIcon, setMobIcon] = useState(true);
+  const currentUser = localStorage.getItem("user");
 
-  // ! Change Icon
+  // ! Change Icon of Mobile display:::
   const changeIcon = (e) => {
     e.preventDefault();
     setMobIcon(!mobIcon);
   };
 
-  console.log(mobIcon);
+  // !! Logout Button functionality:::
+  const logoutUser = (e) => {
+    e.preventDefault();
+    logout();
+  };
+
   useEffect(() => {
     const height = navBar.current.getBoundingClientRect().height;
     console.log(height);
@@ -66,21 +74,31 @@ const Navbar = () => {
                   Homepage
                 </Link>
               </li>
-              {/* <li className="nav_list">
-              <Link className="link" to="/projects">
-                Projects
-              </Link>
-            </li> */}
-              <li className="nav_list">
-                <Link className="link" to="/signup">
-                  signup
-                </Link>
-              </li>
-              <li className="nav_list">
-                <Link className="link" to="/login">
-                  Login
-                </Link>
-              </li>
+              <div>
+                {currentUser ? (
+                  <li className="nav_list">
+                    <button
+                      onClick={logoutUser}
+                      className="link logout_btn desk_logout"
+                    >
+                      Logout
+                    </button>
+                  </li>
+                ) : (
+                  <div className="register_link">
+                    <li className="nav_list">
+                      <Link className="link" to="/signup">
+                        signup
+                      </Link>
+                    </li>
+                    <li className="nav_list">
+                      <Link className="link" to="/login">
+                        Login
+                      </Link>
+                    </li>
+                  </div>
+                )}
+              </div>
             </ul>
           </nav>
         )}
@@ -93,21 +111,26 @@ const Navbar = () => {
                 Homepage
               </Link>
             </li>
-            {/* <li className="nav_list1">
-              <Link className="link1" to="/projects">
-                Projects
-              </Link>
-            </li> */}
-            <li className="nav_list1">
-              <Link className="link1" to="/signup">
-                signup
-              </Link>
-            </li>
-            <li className="nav_list1">
-              <Link className="link1" to="/login">
-                Login
-              </Link>
-            </li>
+            <div>
+              {currentUser ? (
+                <li className="nav_list1">
+                  <button onClick={logoutUser}>Logout</button>
+                </li>
+              ) : (
+                <div>
+                  <li className="nav_list1">
+                    <Link className="link1" to="/signup">
+                      signup
+                    </Link>
+                  </li>
+                  <li className="nav_list1">
+                    <Link className="link1" to="/login">
+                      Login
+                    </Link>
+                  </li>
+                </div>
+              )}
+            </div>
           </ul>
         </div>
         <Outlet />

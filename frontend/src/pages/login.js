@@ -1,41 +1,24 @@
 import { useState } from "react";
+import { useLogin } from "../hooks/useLogin";
 import "../style/signup.css";
 import Footer from "./Footer";
 import FooterCopyright from "./footercopyright";
 
-const loginUrl = "http://localhost:3001/api/user/login";
 const Login = () => {
+  const { login, isLoading, error } = useLogin();
   const [input, setInput] = useState({
     email: "",
     password: "",
   });
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   const handleChange = (e) => {
-    e.preventDefault();
     const { value, name } = e.target;
-    console.log(value, name);
     setInput({ ...input, [name]: value });
   };
+
   const handleSubmit = async (e) => {
-    console.log("login");
-    const response = await fetch(loginUrl, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: input.email, password: input.password }),
-    });
-    const resData = await response.json();
-    if (!response.ok) {
-      setIsLoading(false);
-      setError(resData.error);
-      throw Error("Something went wrong with the login request");
-    }
-    if (response.ok) {
-      // ? Saving data to the DB >>>
-      localStorage.setItem("user", JSON.stringify(resData));
-      setIsLoading(false);
-    }
+    e.preventDefault();
+    await login(input.email, input.password);
+    setInput({ email: "", password: "" });
   };
   return (
     <>
@@ -67,6 +50,7 @@ const Login = () => {
             </div>
             <div className="form_btn-container">
               <button
+                disabled={isLoading}
                 className="btn formBtn"
                 type="submit"
                 onClick={handleSubmit}
@@ -82,6 +66,7 @@ const Login = () => {
                 </a>
               </span>
             </p>
+            {error && <p className="error">{error}</p>}
           </form>
         </section>
         <Footer />
