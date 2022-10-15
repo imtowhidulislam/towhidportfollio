@@ -55,7 +55,6 @@ const Resume = () => {
                                         <h3>{projectName}</h3>
                                         <div className="project_content">
                                             <ul>
-
                                                 <li className='project_info'><span>#</span>{project_info}</li>
                                                 <a className='project_link' href="#">{projectLink}</a>
                                             </ul>

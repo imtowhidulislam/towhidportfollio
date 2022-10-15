@@ -7,6 +7,7 @@ import {
   Time,
   AuthContextProvider,
   Resume,
+  Blog,
 } from "./components/index";
 import Homepage from "./pages/Homepage";
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="resume" element={<Resume />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
         </Routes>

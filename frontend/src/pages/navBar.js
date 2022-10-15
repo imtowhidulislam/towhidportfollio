@@ -79,6 +79,11 @@ const Navbar = () => {
                   Resume
                 </Link>
               </li>
+              <li className="nav_list">
+                <Link className="link" to="/blog">
+                  Blog
+                </Link>
+              </li>
               <div className="register">
                 {currentUser ? (
                   <li className="nav_list">
@@ -117,11 +122,16 @@ const Navbar = () => {
               <Link className="link1" to="/">
                 Homepage
               </Link>
-              <li className="nav_list">
-                <Link className="link" to="/resume">
-                  Resume
-                </Link>
-              </li>
+            </li>
+            <li className="nav_list">
+              <Link className="link" to="/resume">
+                Resume
+              </Link>
+            </li>
+            <li className="nav_list">
+              <Link className="link" to="/blog">
+                Blog
+              </Link>
             </li>
             <div>
               {currentUser ? (
