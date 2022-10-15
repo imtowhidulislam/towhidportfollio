@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from "../pages/Footer"
+import ResumeData from '../components/resumeData'
 import FooterCopyright from "../pages/footercopyright"
 import { FaGithub, FaMailBulk, FaPhoneAlt } from 'react-icons/fa'
 import Towhid from "../assets/towhid-small.jpg"
 import "../style/resume.css"
 
 const Resume = () => {
+    const [resume, setResume] = useState(ResumeData);
+    useEffect(() => {
+        console.log(resume);
+    },[resume])
   return (
     <>
         <div className='resume'>
@@ -42,45 +47,28 @@ const Resume = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="project">
-                            <h3>React Js</h3>
-                            <div className="project_content">
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="project">
-                            <h3>React Js</h3>
-                            <div className="project_content">
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="project">
-                            <h3>React Js</h3>
-                            <div className="project_content">
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                                <ul>
-                                    <li className='project_info'><span>#</span>some details about the project.</li>
-                                    <a className='project_link' href="#">here link will be added</a>
-                                </ul>
-                            </div>
-                        </div>
+                        {
+                            resume.map(res => {
+                                const {projectName, project_info, projectLink, project_info1, projectLink1} = res;
+                                return (
+                                    <div className="project">
+                                        <h3>{projectName}</h3>
+                                        <div className="project_content">
+                                            <ul>
+
+                                                <li className='project_info'><span>#</span>{project_info}</li>
+                                                <a className='project_link' href="#">{projectLink}</a>
+                                            </ul>
+                                            <ul>
+                                                <li className='project_info'><span>#</span>{project_info1}</li>
+                                                <a className='project_link' href="#">{projectLink1}</a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                        
                     </div>
                 </div>
             </div>

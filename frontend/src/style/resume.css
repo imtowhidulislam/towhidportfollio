@@ -7,7 +7,7 @@
 }
 .resume_container{
     background-color: #E5E5E5;
-    width: min(100%, 595px);
+    width: min(100%, 695px);
     margin-inline: auto;
 }
 .resume_bio{
@@ -126,10 +126,10 @@
     
     transform: translate(-50%, -50%);
     background-color: rgb(138, 134, 134);
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 .project > *:nth-child(2){
-    flex: 0 0 71%;
+    flex: 0 0 68%;
 }
 .project_content{
     text-align: left;
@@ -150,4 +150,6 @@
 .project_link{
     text-transform: lowercase;
     cursor: pointer;
+    word-wrap: break-word;
+    font-size: .6rem;
 }
