@@ -74,7 +74,12 @@ const Navbar = () => {
                   Homepage
                 </Link>
               </li>
-              <div>
+              <li className="nav_list">
+                <Link className="link" to="/resume">
+                  Resume
+                </Link>
+              </li>
+              <div className="register">
                 {currentUser ? (
                   <li className="nav_list">
                     <button
@@ -96,9 +101,11 @@ const Navbar = () => {
                         Login
                       </Link>
                     </li>
+                    
                   </div>
                 )}
               </div>
+              
             </ul>
           </nav>
         )}
@@ -110,6 +117,11 @@ const Navbar = () => {
               <Link className="link1" to="/">
                 Homepage
               </Link>
+              <li className="nav_list">
+                <Link className="link" to="/resume">
+                  Resume
+                </Link>
+              </li>
             </li>
             <div>
               {currentUser ? (
@@ -131,6 +143,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+            
           </ul>
         </div>
         <Outlet />

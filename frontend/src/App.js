@@ -6,6 +6,7 @@ import {
   Navbar,
   Time,
   AuthContextProvider,
+  Resume,
 } from "./components/index";
 import Homepage from "./pages/Homepage";
 
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="resume" element={<Resume />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
         </Routes>
