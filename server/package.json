@@ -22,7 +22,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build": "nodemon app.js"
   },
   "repository": {
     "type": "git",
