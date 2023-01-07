@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useLogin } from "../hooks/useLogin";
 import "../style/signup.css";
 import Footer from "./Footer";
@@ -61,9 +62,14 @@ const Login = () => {
             <p className="signup_text">
               Don't have any account ?
               <span>
-                <a target="_blank" href="./login.html">
+                <li className="nav_list1">
+                  <Link className="link1" to="/signup">
+                    sign up
+                  </Link>
+                </li>
+                {/* <a target="_blank" href="./login.html">
                   sign up
-                </a>
+                </a> */}
               </span>
             </p>
             {error && <p className="error">{error}</p>}

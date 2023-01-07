@@ -1,19 +1,27 @@
 .resume{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     width: 100%;
     margin-block: 4rem;
+    padding-inline: 2rem;
+}
+.resume_page{
+    /* z-index: -10; */
 }
 .resume_container{
+    
     background-color: #E5E5E5;
     width: min(100%, 695px);
     margin-inline: auto;
 }
 .resume_bio{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
+    /* display: inline-block; */
+    /* display: grid; */
+    /* place-items: center; */
     background-color: #85C5DA;
     padding-inline: 2rem;
     padding-block: 1rem;
@@ -102,32 +110,14 @@
     content: "";
     color: #85C5DA;
 }
-.project{
-    padding: 0.75rem;
-    border: 2px solid rgb(191, 189, 189);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin-top: 1rem;
-    border-radius: .25rem;
-}
+
+
 .project > *:nth-child(1){
     flex: 0 0 27%;
     text-transform: uppercase;
     text-align: left;
 }
-.project > *:nth-child(1)::after{
-    content: "";
-    position: absolute;
-    width: 2.5px;
-    height: 4rem;
-    top: 50%;
-    
-    transform: translate(-50%, -50%);
-    background-color: rgb(138, 134, 134);
-    margin-left: 1.5rem;
-}
+
 .project > *:nth-child(2){
     flex: 0 0 68%;
 }
@@ -152,4 +142,46 @@
     cursor: pointer;
     word-wrap: break-word;
     font-size: .6rem;
+}
+.project{
+    /* padding-inline: 2rem; */
+    /* border:2px solid red; */
+    border: 2px solid rgb(191, 189, 189);
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    margin-block: 1rem;
+
+}
+/* ? Media Queries are here */
+@media (min-width: 40rem) {
+    .project{
+        padding: 0.75rem;
+        border: 2px solid rgb(191, 189, 189);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 1rem;
+        border-radius: .25rem;
+    }
+    .project > *:nth-child(1)::after{
+        content: "";
+        position: absolute;
+        width: 2.5px;
+        height: 4rem;
+        top: 50%;
+        
+        transform: translate(-50%, -50%);
+        background-color: rgb(138, 134, 134);
+        margin-left: 1.5rem;
+    }
+
+    .resume{
+        padding-inline: 0;
+    }
+    .resume_bio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    }
 }

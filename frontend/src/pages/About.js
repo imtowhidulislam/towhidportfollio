@@ -5,7 +5,7 @@ import "../style/container.css";
 
 const About = () => {
   return (
-    <>
+    <div className="about">
       <div className="container">
         <div class="intro_container1 about_section">
           <div class="intro_child intro_child-2">
@@ -27,7 +27,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

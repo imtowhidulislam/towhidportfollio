@@ -5,6 +5,9 @@
   --bgc-cyan: #0d7d85;
   --bgc-body: #0b071d;
 }
+.about{
+  /* z-index: -10; */
+}
 .about_section {
   /* border-top: 2px solid white; */
   padding-block: 10rem;

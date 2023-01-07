@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 // import "../style/signupStyle.css";
+import { Link } from "react-router-dom";
 import "../style/signup.css";
 import "../style/footer.css";
 
@@ -173,9 +174,14 @@ const Signup = () => {
           <p class="signup_text">
             Already have an account ?
             <span>
-              <a target="_blank" href="./login.html">
+              <li className="nav_list1">
+                <Link className="link1" to="/login">
+                  Login
+                </Link>
+              </li>
+              {/* <a target="_blank" href="./login.html">
                 login
-              </a>
+              </a> */}
             </span>
           </p>
         </form>

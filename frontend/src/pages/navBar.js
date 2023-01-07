@@ -79,11 +79,6 @@ const Navbar = () => {
                   Resume
                 </Link>
               </li>
-              <li className="nav_list">
-                <Link className="link" to="/blog">
-                  Blog
-                </Link>
-              </li>
               <div className="register">
                 {currentUser ? (
                   <li className="nav_list">
@@ -123,14 +118,9 @@ const Navbar = () => {
                 Homepage
               </Link>
             </li>
-            <li className="nav_list">
-              <Link className="link" to="/resume">
+            <li className="nav_list1">
+              <Link className="link1" to="/resume">
                 Resume
-              </Link>
-            </li>
-            <li className="nav_list">
-              <Link className="link" to="/blog">
-                Blog
               </Link>
             </li>
             <div>

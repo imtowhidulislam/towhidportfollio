@@ -19,7 +19,8 @@ a {
   background-image: url("../assets/heroimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left center;
+  background-position:center;
+  z-index: -1;
 }
 .signup_container::after {
   position: absolute;

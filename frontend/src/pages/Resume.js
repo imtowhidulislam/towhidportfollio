@@ -12,7 +12,7 @@ const Resume = () => {
         console.log(resume);
     },[resume])
   return (
-    <>
+    <div className='resume_page'>
         <div className='resume'>
             <div className="resume_wrapper">
                 <div className="resume_container">
@@ -55,6 +55,7 @@ const Resume = () => {
                                         <h3>{projectName}</h3>
                                         <div className="project_content">
                                             <ul>
+
                                                 <li className='project_info'><span>#</span>{project_info}</li>
                                                 <a className='project_link' href="#">{projectLink}</a>
                                             </ul>
@@ -71,11 +72,13 @@ const Resume = () => {
                     </div>
                 </div>
             </div>
-        </div>
+</div>
         <Footer />
         <FooterCopyright />
-    </>
+    </div>
   )
 }
 
-export default Resume
+export default Resume;
+
+ 
