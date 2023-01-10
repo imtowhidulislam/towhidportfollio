@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { skillsData } from "../components/skillData";
 import "../style/skill.css";
 import "../style/container.css";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+
 
 const skillUrl = "http://localhost:3001/api/skill";
 
 const Skills = () => {
   const [current, setCurrent] = useState(0);
   const [skill, setSkill] = useState([]);
+  const [mySkills, setMySkills] = useState(skillsData);
   const length = skill.length;
 
   const showSkill = async () => {
     const res = await fetch(skillUrl);
     const skillData = await res.json();
-
+    localStorage.setItem("skillData", JSON.stringify(skillData));
     return setSkill(skillData);
   };
 
@@ -27,11 +30,17 @@ const Skills = () => {
     console.log("Right");
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
+
   useEffect(() => {
     showSkill();
-    console.log(length);
-    console.log(skill);
   }, [current]);
+
+  useEffect(() => {
+    const skilData = JSON.parse(localStorage.getItem("skillData"));
+    skilData && setSkill(skilData);
+    console.log(skilData);
+    console.log(mySkills);
+  },[])
   return (
     <>
       <div className="container">
@@ -41,9 +50,22 @@ const Skills = () => {
           <div class="area_definer">
             <div class="skills1 slider">
               <div>
-                {skill.map((skill, i) => {
+                {skill ? skill.map((skill, i) => {
                   const { _id, title, desc, year } = skill;
-
+                  return (
+                    <div
+                      className={i === current ? "slide active" : "slide"}
+                      key={_id}
+                    >
+                      <h2 className="skill_title text-blue-400">{title}</h2>
+                      <p className="skill_desc">{desc}</p>
+                      <h3 className="skill_exp">
+                        experience : <strong>{year}</strong> years
+                      </h3>
+                    </div>
+                  )
+                }) : mySkills.map((skill, i) => {
+                  const { _id, title, desc, year } = skill;
                   return (
                     <div
                       className={i === current ? "slide active" : "slide"}
@@ -57,6 +79,7 @@ const Skills = () => {
                     </div>
                   );
                 })}
+                
               </div>
               <div class="skill_navigate_container">
                 <button

@@ -1,5 +1,5 @@
 import React from "react";
-import { Projects } from "../components/index";
+import { Projects } from "../container/index";
 import { GrInstagram } from "react-icons/gr";
 import Skills from "../pages/Skills";
 import Footer from "../pages/Footer";

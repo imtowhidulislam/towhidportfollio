@@ -79,6 +79,11 @@ const Navbar = () => {
                   Resume
                 </Link>
               </li>
+              <li className="nav_list">
+                <Link className="link" to="/allskills">
+                  Skills
+                </Link>
+              </li>
               <div className="register">
                 {currentUser ? (
                   <li className="nav_list">
@@ -123,6 +128,11 @@ const Navbar = () => {
                 Resume
               </Link>
             </li>
+            <li className="nav_list">
+                <Link className="link" to="/allskills">
+                  Skills
+                </Link>
+              </li>
             <div>
               {currentUser ? (
                 <li className="nav_list1">

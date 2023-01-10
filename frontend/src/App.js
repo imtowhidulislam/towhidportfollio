@@ -7,7 +7,8 @@ import {
   Time,
   AuthContextProvider,
   Resume,
-} from "./components/index";
+  Allskills
+} from "./container/index";
 import Homepage from "./pages/Homepage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="resume" element={<Resume />} />
+          <Route path="allskills" element={<Allskills />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
         </Routes>
