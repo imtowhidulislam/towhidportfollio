@@ -37,7 +37,7 @@ const Footer = () => {
               <div class="footer_row footer-1">
                 <h2>Email</h2>
                 <p>
-                  <FiMail /> Towhidulislam12995@gmail.com
+                  <FiMail /> Towhidulislam.dev@gmail.com
                 </p>
                 <p>
                   <FaFacebook /> Towhidul Islam
