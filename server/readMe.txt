@@ -1,3 +1,0 @@
-** Generate Secret password...
-1) node 
-2) require('crypto').randomBytes(32).toString('hex')
