@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaReact, FaHtml5, FaCss3, FaJsSquare,FaGithub, FaSass, FaFigma,FaNodeJs} from 'react-icons/fa'
+import {SiTailwindcss,SiMongodb} from "react-icons/si";
+
 import Footer from './Footer'
 import FooterCopyright from './footercopyright'
 import "../style/mySkills.css";
@@ -25,6 +27,9 @@ const Allskills = () => {
                 <FaReact />
             </li>
             <li>
+                <SiTailwindcss />
+            </li>
+            <li>
                 <FaSass />
             </li>
             <li>
@@ -32,6 +37,9 @@ const Allskills = () => {
             </li>
             <li>
                 <FaNodeJs />
+            </li>
+            <li>
+                <SiMongodb />
             </li>
         </div>
         {/* <div className="skill_wrapper  container">

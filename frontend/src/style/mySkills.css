@@ -4,10 +4,85 @@
 .skill{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 2.5rem;
+    column-gap: 1.5rem;
+    row-gap: 4.5rem;
     place-items: center;
-    /* margin-inline: auto; */
     padding-block: 5rem;
+    cursor:pointer;
+}
+.skill > :nth-child(1){
+    color: orange;
+    position: relative;
+}
+.skill > :nth-child(1){
+    color: orange;
+    position: relative;
+}
+.skill > :nth-child(1){
+    color: orange;
+    position: relative;
+}
+.skill > :nth-child(2){
+    color: rgb(80, 173, 249);
+    position: relative;
+}
+.skill > :nth-child(3){
+    color: rgb(237, 223, 15);
+    position: relative;
+}
+.skill > :nth-child(4){
+    color: rgb(4, 220, 220);
+    position: relative;
+}
+.skill > :nth-child(5){
+    color: rgb(93, 194, 194);
+    position: relative;
+}
+.skill > :nth-child(6){
+    color: rgb(246, 118, 140);
+    position: relative;
+}
+.skill > :nth-child(7){
+    color: rgb(17, 72, 238);
+    position: relative;
+}
+.skill > :nth-child(8){
+    color: rgb(75, 183, 113);
+    position: relative;
+}
+.skill > :nth-child(9){
+    color: rgb(15, 111, 48);
+    position: relative;
+}
+:is(.skill > :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(6),:nth-child(7),:nth-child(8),:nth-child(9))::after{
+    position: absolute;
+    font-size: 1.1rem;
+    color: #000000;
+    text-transform: uppercase;
+    background-color: rgb(186, 182, 182);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: .25rem;
+    width: max-content;
+    z-index: -1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.skill > :nth-child(1)::after{content:"html5"}
+.skill > :nth-child(2)::after{content:"css3"}
+.skill > :nth-child(3)::after{content:"javascript"}
+.skill > :nth-child(4)::after{content:"react js"}
+.skill > :nth-child(5)::after{content:"tailwindcss"}
+.skill > :nth-child(6)::after{content:"sass"}
+.skill > :nth-child(7)::after{content:"figma"}
+.skill > :nth-child(8)::after{content:"node js"}
+.skill > :nth-child(9)::after{content:"mongoDb"}
+
+:is(.skill > :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(6),:nth-child(7),:nth-child(8),:nth-child(9)):hover::after{
+    opacity: 1;
+    transform: translateY(-85px);
 }
 .skill > li {
     font-size: clamp(5rem, 4vw + 5rem, 18rem);
