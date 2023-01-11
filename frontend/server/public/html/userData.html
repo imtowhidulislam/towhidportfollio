@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Data</title>
+    <link rel="stylesheet" href="../style/userStyle.css" />
+    <link rel="stylesheet" href="../style/signupStyle.css" />
+    <script defer src="../js/userApp.js"></script>
+  </head>
+  <body>
+    <header id="header" class="section">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./signupForm.html">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="userData" class="section">
+      <div class="container">
+        <div class="userData_content">
+          <!-- <div class="user">
+            <img src="http://unsplash.it/500/300?imgage=423" alt="userImage" />
+            <div class="full_name">
+              <h2 class="firstName">Towhidul</h2>
+              <h2 class="lastName">Islam</h2>
+            </div>
+            <p class="email">Towhidulislam@gmail.com</p>
+            <div class="btn_container">
+              <button class="btn user_btn">remove</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="form_container">
+      <div class="container">
+        <form action="" class="user_form">
+          <h2 class="form_title">Sing up</h2>
+          <div class="input_area">
+            <label for="First Name">First Name :</label>
+            <input
+              type="text"
+              name="first name"
+              class="firstName"
+              placeholder="enter first name"
+            />
+          </div>
+          <div class="input_area">
+            <label for="Last Name">Last Name :</label>
+            <input
+              type="text"
+              class="lastName"
+              name="last name"
+              placeholder="enter last name"
+            />
+          </div>
+          <div class="input_area">
+            <label for="user Name">User Name :</label>
+            <input
+              type="text"
+              class="userName"
+              name="user name"
+              placeholder="enter user name"
+            />
+          </div>
+          <div class="input_area">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              class="email"
+              name="email"
+              placeholder="enter email"
+            />
+          </div>
+          <div class="input_area">
+            <label for="password">Password :</label>
+            <input
+              type="password"
+              name="password"
+              class="password"
+              placeholder="enter password"
+            />
+          </div>
+          <div class="form_btn-container">
+            <button class="btn formBtn" type="submit">sign up</button>
+          </div>
+          <p class="signup_text">
+            Already have an account?
+            <span><a target="_blank" href="./login.html">login</a></span>
+          </p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
